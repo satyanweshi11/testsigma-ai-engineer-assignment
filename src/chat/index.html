@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blast Radius Assistant</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --surface:#ffffff; --surface-2:#eef1f6; --ink:#121722; --soft:#5a6678;
+    --line:#dde3ec; --accent:#2563eb; --accent-soft:#e7eeff; --user:#2563eb; --user-ink:#fff;
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#0b0f16; --surface:#141a24; --surface-2:#1b222e; --ink:#eaeff7; --soft:#9aa7ba;
+    --line:#26303d; --accent:#6f8bff; --accent-soft:#1a2340; --user:#3b5bdb; --user-ink:#fff;
+    color-scheme:dark;
+  }}
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+  header{border-bottom:1px solid var(--line);background:var(--surface);
+         padding:14px max(16px,env(safe-area-inset-left));display:flex;align-items:center;gap:12px}
+  header .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+  header h1{font-size:15px;margin:0;font-weight:600;letter-spacing:-.01em}
+  header .sub{font-size:12px;color:var(--soft);margin-left:2px}
+  header .status{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--soft)}
+  main{flex:1;overflow-y:auto}
+  .wrap{max-width:780px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-left)) 8px}
+  .msg{display:flex;margin-bottom:16px}
+  .msg.user{justify-content:flex-end}
+  .bubble{max-width:82%;padding:12px 15px;border-radius:14px;font-size:14.5px;line-height:1.55}
+  .msg.user .bubble{background:var(--user);color:var(--user-ink);border-bottom-right-radius:4px}
+  .msg.bot .bubble{background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:4px}
+  .bubble p{margin:0 0 8px} .bubble p:last-child{margin:0}
+  .bubble ul{margin:6px 0;padding-left:20px} .bubble li{margin:3px 0}
+  .bubble code{font-family:var(--mono);font-size:12.5px;background:var(--surface-2);padding:1px 5px;border-radius:5px}
+  .bubble strong{font-weight:600}
+  .src{margin-top:8px;font-family:var(--mono);font-size:11.5px}
+  .src summary{color:var(--soft);cursor:pointer}
+  .src pre{white-space:pre-wrap;background:var(--surface-2);border:1px solid var(--line);
+           border-radius:8px;padding:10px;margin:6px 0 0;max-height:220px;overflow:auto;color:var(--soft)}
+  .typing{display:inline-flex;gap:4px;align-items:center}
+  .typing i{width:6px;height:6px;border-radius:50%;background:var(--soft);animation:b 1.2s infinite}
+  .typing i:nth-child(2){animation-delay:.2s} .typing i:nth-child(3){animation-delay:.4s}
+  @keyframes b{0%,60%,100%{opacity:.3}30%{opacity:1}}
+  .intro{color:var(--soft);font-size:14px;line-height:1.6;margin-bottom:18px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+  .chip{font-size:12.5px;background:var(--surface);border:1px solid var(--line);color:var(--ink);
+        border-radius:999px;padding:7px 13px;cursor:pointer}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+  footer{border-top:1px solid var(--line);background:var(--surface);
+         padding:12px max(16px,env(safe-area-inset-left)) max(14px,env(safe-area-inset-bottom))}
+  .composer{max-width:780px;margin:0 auto;display:flex;gap:10px;align-items:flex-end}
+  textarea{flex:1;resize:none;font-family:var(--sans);font-size:14.5px;color:var(--ink);
+           background:var(--surface-2);border:1px solid var(--line);border-radius:12px;
+           padding:11px 14px;max-height:140px;line-height:1.5}
+  textarea:focus{outline:none;border-color:var(--accent)}
+  button.send{background:var(--accent);color:#fff;border:none;border-radius:12px;
+              padding:0 18px;height:44px;font-size:14px;font-weight:600;cursor:pointer}
+  button.send:disabled{opacity:.5;cursor:default}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+<body>
+<header>
+  <span class="dot"></span>
+  <h1>Blast Radius Assistant</h1>
+  <span class="sub">grounded in the knowledge graph</span>
+  <span class="status" id="status">connecting...</span>
+</header>
+<main>
+  <div class="wrap" id="wrap">
+    <div class="intro">
+      Ask about the application's components. I answer from the Requirements / UI / Code knowledge graph,
+      and I will say when something is not covered.
+    </div>
+    <div class="chips" id="chips">
+      <span class="chip">What implements the Rectangle tool?</span>
+      <span class="chip">Which requirements does the export dialog cover?</span>
+      <span class="chip">Which requirements have no UI coverage?</span>
+      <span class="chip">What component is behind the Library panel?</span>
+      <span class="chip">Tell me about dark mode support.</span>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="composer">
+    <textarea id="input" rows="1" placeholder="Ask about a component, requirement, or coverage gap..."></textarea>
+    <button class="send" id="send">Send</button>
+  </div>
+</footer>
+<script>
+  const wrap = document.getElementById('wrap');
+  const input = document.getElementById('input');
+  const send = document.getElementById('send');
+  const statusEl = document.getElementById('status');
+
+  fetch('/api/health').then(r=>r.json()).then(d=>{
+    statusEl.textContent = d.ok ? (d.nodes + ' nodes') : 'graph offline';
+  }).catch(()=>statusEl.textContent='offline');
+
+  function addMsg(role, html){
+    const m = document.createElement('div'); m.className = 'msg ' + role;
+    const b = document.createElement('div'); b.className = 'bubble'; b.innerHTML = html;
+    m.appendChild(b); wrap.appendChild(m);
+    document.querySelector('main').scrollTop = document.querySelector('main').scrollHeight;
+    return b;
+  }
+  function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+
+  async function ask(q){
+    addMsg('user', esc(q));
+    const b = addMsg('bot', '<span class="typing"><i></i><i></i><i></i></span>');
+    try{
+      const r = await fetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({question:q})});
+      const d = await r.json();
+      if(d.error){ b.innerHTML = '<em>Error: '+esc(d.error)+'</em>'; return; }
+      const md = window.marked ? marked.parse(d.answer) : esc(d.answer);
+      let html = md;
+      if(d.context){
+        html += '<details class="src"><summary>graph context used</summary><pre>'+esc(d.context)+'</pre></details>';
+      }
+      b.innerHTML = html;
+    }catch(e){ b.innerHTML = '<em>Request failed.</em>'; }
+    document.querySelector('main').scrollTop = document.querySelector('main').scrollHeight;
+  }
+
+  function submit(){
+    const q = input.value.trim(); if(!q) return;
+    input.value=''; input.style.height='auto'; ask(q);
+  }
+  send.addEventListener('click', submit);
+  input.addEventListener('keydown', e=>{ if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); submit(); }});
+  input.addEventListener('input', ()=>{ input.style.height='auto'; input.style.height=Math.min(input.scrollHeight,140)+'px'; });
+  document.getElementById('chips').addEventListener('click', e=>{
+    if(e.target.classList.contains('chip')){ input.value=e.target.textContent; submit(); }
+  });
+</script>
+</body>
+</html>

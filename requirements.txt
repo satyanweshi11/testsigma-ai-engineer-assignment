@@ -11,3 +11,5 @@ httpx>=0.27.0              # GitHub API + general HTTP
 pyyaml>=6.0               # config
 python-dotenv>=1.0.0      # .env loading
 tenacity>=8.3.0           # retry/backoff for free-tier rate limits
+fastapi>=0.110.0         # local chat web app (src/chat)
+uvicorn>=0.29.0          # ASGI server for the chat app

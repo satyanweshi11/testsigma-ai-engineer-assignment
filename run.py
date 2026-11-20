@@ -29,6 +29,8 @@ def main() -> int:
     r = sub.add_parser("reason")
     r.add_argument("--pr", type=int, required=False)
     sub.add_parser("all")
+    ch = sub.add_parser("chat")
+    ch.add_argument("--port", type=int, default=8000)
 
     args = p.parse_args()
     settings = config.load()
@@ -51,6 +53,10 @@ def main() -> int:
     elif args.cmd == "reason":
         from src.reason.blast_radius import run
         run(settings, pr_number=args.pr)
+    elif args.cmd == "chat":
+        import uvicorn
+        print(f"Blast Radius Assistant -> http://localhost:{args.port}")
+        uvicorn.run("src.chat.server:app", host="127.0.0.1", port=args.port)
     elif args.cmd == "all":
         from src.codemap.mapper import run as codemap_run
         from src.ingest.requirements import run as ingest_run
