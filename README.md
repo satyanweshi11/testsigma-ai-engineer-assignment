@@ -1,8 +1,17 @@
 # Blast Radius Engine
 
+[![CI](https://github.com/satyanweshi11/testsigma-ai-engineer-assignment/actions/workflows/ci.yml/badge.svg)](https://github.com/satyanweshi11/testsigma-ai-engineer-assignment/actions/workflows/ci.yml)
+
 A tri-layer knowledge graph that connects **product intent** (requirements), the **running UI** (crawl), and the **code** behind it — then, given a real pull request, reports **what's at risk** in language a QA lead can read.
 
-Built for the Testsigma AI Engineer assignment. Architecture diagram and design doc in [`docs/`](docs/).
+Built for the Testsigma AI Engineer assignment.
+
+## Documentation
+- [Design document](docs/design.md) — Part B: agent decomposition, schema, confidence, eval, scope, roadmap
+- [Production architecture](docs/production-architecture.md) — security + the intended-but-not-wired scaling design (gateway, auth, queues, workers, rate limiters)
+- [Architecture diagram](docs/architecture.html) — the visual pipeline
+- [Sample reports](reports/) — blast radius for [PR #12064](reports/PR-12064.md) (broad) and [PR #12347](reports/PR-12347.md) (narrow)
+- [Evaluation](eval/README.md) — fixture + hand-authored gold, run with `python -m eval.evaluate`
 
 > **Design principle:** deterministic spine, LLM only at the seams. The graph, crawl mechanics, diff parsing and traversal are reproducible; the LLM is used only for prose→requirements, fuzzy cross-layer linking, and the final write-up.
 
