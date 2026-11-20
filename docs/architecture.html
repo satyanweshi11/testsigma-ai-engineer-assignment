@@ -1,0 +1,301 @@
+<title>Blast Radius Engine</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* Layout: a vertical spine of pipeline stages, three input layers feeding a fusion
+     band, then the graph schema + reasoning path. Engineering/infra treatment. */
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --surface-2: #eef1f5;
+    --ink: #10151c;
+    --ink-soft: #4a5566;
+    --line: #d9dee6;
+    --spine: #2f54eb;      /* deterministic */
+    --spine-soft: #e6ecfe;
+    --llm: #b5530b;        /* LLM at the seams */
+    --llm-soft: #fbebdd;
+    --req: #0f9d6e;        /* requirements layer */
+    --ui: #2f54eb;         /* ui layer */
+    --code: #7c3aed;       /* code layer */
+    --risk: #d1343b;
+    --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c1016; --surface: #141a22; --surface-2: #1b232e; --ink: #eef2f7;
+      --ink-soft: #9aa7b8; --line: #28323f; --spine: #6f8bff; --spine-soft: #1a2440;
+      --llm: #e8974e; --llm-soft: #3a2914; --req: #35c892; --ui: #6f8bff; --code: #a985f5;
+      --risk: #f06a70; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c1016; --surface: #141a22; --surface-2: #1b232e; --ink: #eef2f7;
+    --ink-soft: #9aa7b8; --line: #28323f; --spine: #6f8bff; --spine-soft: #1a2440;
+    --llm: #e8974e; --llm-soft: #3a2914; --req: #35c892; --ui: #6f8bff; --code: #a985f5;
+    --risk: #f06a70; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--ink); font-family: var(--font-sans);
+    line-height: 1.5; margin: 0; -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1000px; margin: 0 auto;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+    padding-block: 40px 64px;
+  }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 36px; }
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-soft); margin: 0 0 10px;
+  }
+  h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.04; margin: 0 0 14px; letter-spacing: -0.02em; text-wrap: balance; }
+  .lede { font-size: clamp(16px, 2.4vw, 19px); color: var(--ink-soft); max-width: 60ch; margin: 0 0 20px; }
+  .principle {
+    display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    font-family: var(--font-mono); font-size: 13px; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 999px; padding: 7px 15px;
+  }
+  .principle b { color: var(--spine); }
+  .principle i { color: var(--llm); font-style: normal; }
+  h2 {
+    font-size: 13px; font-family: var(--font-mono); letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-soft); margin: 48px 0 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--spine); }
+
+  /* input layers */
+  .layers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .layer {
+    background: var(--surface); border: 1px solid var(--line);
+    border-top: 3px solid var(--c); border-radius: 12px; padding: 16px;
+  }
+  .layer .tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--c); font-weight: 600; }
+  .layer h3 { margin: 6px 0 6px; font-size: 16px; }
+  .layer p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+  .layer .src { margin-top: 10px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); border-top: 1px dashed var(--line); padding-top: 8px; }
+
+  .converge { text-align: center; color: var(--ink-soft); font-size: 22px; margin: 6px 0 2px; }
+
+  /* pipeline stages */
+  .stages { display: grid; gap: 12px; }
+  .stage {
+    display: grid; grid-template-columns: 54px 1fr auto; gap: 16px; align-items: start;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px;
+  }
+  .stage .num {
+    font-family: var(--font-mono); font-weight: 600; font-size: 15px;
+    width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px;
+    background: var(--spine-soft); color: var(--spine);
+  }
+  .stage.seam .num { background: var(--llm-soft); color: var(--llm); }
+  .stage .body h3 { margin: 0 0 4px; font-size: 16px; }
+  .stage .body p { margin: 0; font-size: 13.5px; color: var(--ink-soft); max-width: 62ch; }
+  .stage .mode {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase;
+    padding: 4px 9px; border-radius: 999px; white-space: nowrap; align-self: center; border: 1px solid var(--line);
+  }
+  .mode.det { color: var(--spine); background: var(--spine-soft); border-color: transparent; }
+  .mode.llm { color: var(--llm); background: var(--llm-soft); border-color: transparent; }
+  .mode.mix { color: var(--ink-soft); }
+  .flowtip { text-align: center; color: var(--line); font-size: 15px; line-height: 1; margin: -4px 0; }
+
+  .out {
+    margin-top: 12px; background: linear-gradient(0deg, var(--spine-soft), transparent);
+    border: 1px solid var(--spine); border-radius: 12px; padding: 16px 18px;
+  }
+  .out .tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--spine); }
+  .out h3 { margin: 4px 0 6px; font-size: 17px; }
+  .out p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+
+  /* schema */
+  .schema { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .panel h3 { margin: 0 0 12px; font-size: 14px; }
+  .nodes { display: flex; flex-wrap: wrap; gap: 8px; }
+  .node {
+    font-family: var(--font-mono); font-size: 12.5px; padding: 5px 11px; border-radius: 7px;
+    border: 1px solid var(--line); background: var(--surface-2);
+  }
+  .node.req { color: var(--req); border-color: color-mix(in srgb, var(--req) 40%, var(--line)); }
+  .node.ui { color: var(--ui); border-color: color-mix(in srgb, var(--ui) 40%, var(--line)); }
+  .node.code { color: var(--code); border-color: color-mix(in srgb, var(--code) 40%, var(--line)); }
+  .node.gap { color: var(--risk); border-color: color-mix(in srgb, var(--risk) 45%, var(--line)); border-style: dashed; }
+  .edges { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+  .edges li { font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
+  .edges b { color: var(--ink); font-weight: 600; }
+  .edges .rel { color: var(--spine); }
+  .edges .rel.seam { color: var(--llm); }
+
+  .absence {
+    margin-top: 14px; border: 1px solid color-mix(in srgb, var(--risk) 40%, var(--line));
+    background: color-mix(in srgb, var(--risk) 7%, var(--surface));
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .absence h3 { margin: 0 0 6px; font-size: 15px; color: var(--risk); display: flex; gap: 8px; align-items: center; }
+  .absence p { margin: 0 0 8px; font-size: 13.5px; color: var(--ink-soft); }
+  .absence code { font-family: var(--font-mono); font-size: 12px; background: var(--surface-2); padding: 2px 6px; border-radius: 5px; color: var(--ink); }
+
+  /* boundary table */
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  td.det { color: var(--spine); }
+  td.llm { color: var(--llm); }
+  .tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+  .tbl-wrap table td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+  .scope { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+  .scope div { border-radius: 12px; padding: 14px 16px; border: 1px solid var(--line); background: var(--surface); }
+  .scope .k { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 6px; }
+  .scope .deep .k { color: var(--req); }
+  .scope .keep .k { color: var(--ui); }
+  .scope .cut .k { color: var(--llm); }
+  .scope p { margin: 0; font-size: 13px; color: var(--ink-soft); }
+
+  footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-soft); font-family: var(--font-mono); }
+
+  @media (max-width: 680px) {
+    .layers, .schema, .scope { grid-template-columns: 1fr; }
+    .stage { grid-template-columns: 44px 1fr; }
+    .stage .mode { grid-column: 2; justify-self: start; margin-top: 4px; }
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Testsigma · AI Engineer · System Architecture</p>
+    <h1>Blast Radius Engine</h1>
+    <p class="lede">A tri-layer knowledge graph that connects product intent, the running UI, and the code behind it — then, given a real pull request, reports what's at risk in language a QA lead can read.</p>
+    <span class="principle"><b>Deterministic spine</b> · <i>LLM only at the seams</i> — graph, crawl, diff &amp; traversal are reproducible; the model is used only where semantic judgment is unavoidable.</span>
+  </header>
+
+  <h2>Three inputs, three layers</h2>
+  <div class="layers">
+    <div class="layer" style="--c:var(--req)">
+      <span class="tag">Requirements</span>
+      <h3>What was intended</h3>
+      <p>Public PRD / README / docs, parsed into atomic, testable requirements.</p>
+      <div class="src">docs → requirements.json</div>
+    </div>
+    <div class="layer" style="--c:var(--ui)">
+      <span class="tag">DOM / UI</span>
+      <h3>What was built</h3>
+      <p>Crawl of key screens: elements, selectors, screenshots, interaction transitions.</p>
+      <div class="src">app URL → crawl/*.json</div>
+    </div>
+    <div class="layer" style="--c:var(--code)">
+      <span class="tag">Code</span>
+      <h3>How it was built</h3>
+      <p>Public repo parsed into symbols (components / functions) and an import graph.</p>
+      <div class="src">repo → code map</div>
+    </div>
+  </div>
+  <p class="converge">↓ &nbsp; fused into one Neo4j graph &nbsp; ↓</p>
+
+  <h2>Six-stage pipeline</h2>
+  <div class="stages">
+    <div class="stage">
+      <div class="num">1</div>
+      <div class="body"><h3>Crawl — UI layer</h3><p>LLM-guided Playwright visits seed screens, captures DOM, screenshots, interactive elements with stable selectors, and screen-to-screen transitions.</p></div>
+      <span class="mode mix">Deterministic + light LLM</span>
+    </div>
+    <div class="flowtip">↓</div>
+    <div class="stage seam">
+      <div class="num">2</div>
+      <div class="body"><h3>Ingest — Requirements layer</h3><p>Prose docs chunked deterministically; the LLM turns prose into discrete, testable requirement nodes with acceptance criteria and a type.</p></div>
+      <span class="mode llm">LLM core</span>
+    </div>
+    <div class="flowtip">↓</div>
+    <div class="stage">
+      <div class="num">3</div>
+      <div class="body"><h3>Code map — Code layer</h3><p>Shallow clone, parse exported symbols to file + line, build the import / dependency graph. Pure static analysis.</p></div>
+      <span class="mode det">Deterministic</span>
+    </div>
+    <div class="flowtip">↓</div>
+    <div class="stage seam">
+      <div class="num">4</div>
+      <div class="body"><h3>Link / Fuse — cross-layer edges</h3><p>Exact matches (test-id, aria, text) first; embedding similarity next; the LLM adjudicates only what's left ambiguous. Every edge carries <b>confidence</b> + <b>evidence</b>. No match above threshold becomes a recorded <b>absence</b>, never a silent drop.</p></div>
+      <span class="mode llm">Embeddings + LLM</span>
+    </div>
+    <div class="flowtip">↓</div>
+    <div class="stage">
+      <div class="num">5</div>
+      <div class="body"><h3>Load — Neo4j</h3><p>Idempotent <code>MERGE</code> of nodes and edges with constraints. The graph is the single source of truth all queries run against.</p></div>
+      <span class="mode det">Deterministic</span>
+    </div>
+    <div class="flowtip">↓</div>
+    <div class="stage seam">
+      <div class="num">6</div>
+      <div class="body"><h3>Reason — blast radius</h3><p>PR number → diff → changed symbols (deterministic). Traverse code → UI → flows → requirements; path confidence = product of edge confidences. The LLM renders the final human-readable report — nothing more.</p></div>
+      <span class="mode llm">Traversal + LLM write-up</span>
+    </div>
+  </div>
+
+  <div class="out">
+    <span class="tag">Output</span>
+    <h3>reports/PR-&lt;n&gt;.md + PR-&lt;n&gt;.json</h3>
+    <p>What's at risk · which discovered flows to retest · which requirements may lose coverage · an explicit "needs human review" list — written for a non-engineer QA lead.</p>
+  </div>
+
+  <h2>The deterministic / LLM boundary</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Stage</th><th>Deterministic</th><th>LLM</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Crawl</td><td class="det">Navigation, capture, selector &amp; transition extraction</td><td class="llm">Decide what to click; semantic element labels</td></tr>
+        <tr><td>2 · Ingest</td><td class="det">Fetch &amp; chunk docs</td><td class="llm">Prose → atomic testable requirements</td></tr>
+        <tr><td>3 · Code map</td><td class="det">Symbol parse, import graph</td><td class="llm">—</td></tr>
+        <tr><td>4 · Link</td><td class="det">Exact matches, embedding similarity</td><td class="llm">Adjudicate ambiguous matches, score</td></tr>
+        <tr><td>5 · Load</td><td class="det">Idempotent graph load</td><td class="llm">—</td></tr>
+        <tr><td>6 · Reason</td><td class="det">Diff parse, traversal, confidence math</td><td class="llm">Write the report</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Graph schema</h2>
+  <div class="schema">
+    <div class="panel">
+      <h3>Node types</h3>
+      <div class="nodes">
+        <span class="node req">Requirement</span>
+        <span class="node ui">Screen</span>
+        <span class="node ui">UIElement</span>
+        <span class="node ui">UIFlow</span>
+        <span class="node code">CodeSymbol</span>
+        <span class="node gap">Gap</span>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Edge types</h3>
+      <ul class="edges">
+        <li><b>Screen</b> <span class="rel">─CONTAINS→</span> <b>UIElement</b></li>
+        <li><b>UIElement</b> <span class="rel">─TRANSITIONS_TO→</span> <b>Screen</b></li>
+        <li><b>UIFlow</b> <span class="rel">─STEP→</span> <b>UIElement</b></li>
+        <li><b>UIElement</b> <span class="rel seam">─IMPLEMENTED_BY→</span> <b>CodeSymbol</b></li>
+        <li><b>CodeSymbol</b> <span class="rel">─DEPENDS_ON→</span> <b>CodeSymbol</b></li>
+        <li><b>Requirement</b> <span class="rel seam">─VERIFIED_BY→</span> <b>UIElement</b></li>
+        <li><b>Requirement</b> <span class="rel">─HAS_GAP→</span> <b>Gap</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="absence">
+    <h3>◇ Modeling absence as a positive assertion</h3>
+    <p>A missing edge is ambiguous — it can't be told apart from "not analyzed yet." So absence is recorded, not inferred: <code>Requirement.coverage ∈ {verified, partial, absent, ambiguous}</code> plus an explicit <code>(Requirement)-[:HAS_GAP]-&gt;(:Gap)</code> node storing the best candidate found and its sub-threshold score.</p>
+    <p>This makes absence <b>queryable and auditable</b> — and it can even surface in a blast radius: a PR touching the only code tentatively linked to an already-absent requirement.</p>
+  </div>
+
+  <h2>Scope — declared, not hidden</h2>
+  <div class="scope">
+    <div class="deep"><div class="k">Deep</div><p>Code↔UI linking and blast-radius reasoning — the intelligence layer, and the most demonstrable deliverable.</p></div>
+    <div class="keep"><div class="k">Kept real</div><p>Requirements ingestion — modest but genuine, enough to make absence modeling meaningful.</p></div>
+    <div class="cut"><div class="k">Scoped down</div><p>Crawl breadth — ~5–8 seed screens captured well, not autonomous full-site spidering.</p></div>
+  </div>
+
+  <footer>Neo4j · Playwright · public repo + PR · LLM behind one swappable client · deterministic stages reproducible across 100 runs</footer>
+</div>
