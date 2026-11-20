@@ -1,0 +1,23 @@
+{
+  "_comment": "Hand-authored ground truth: for each UI element label, the code component(s) a human expert considers a correct IMPLEMENTED_BY target. Multiple acceptable answers where mapping granularity is genuinely ambiguous (e.g. the button-logic component vs its icon). Tied to the frozen fixture in eval/fixtures/.",
+  "mappings": [
+    {"label": "Rectangle", "acceptable": ["RectangleToolButton"]},
+    {"label": "Arrow", "acceptable": ["ArrowToolButton"]},
+    {"label": "Ellipse", "acceptable": ["EllipseToolButton"]},
+    {"label": "Diamond", "acceptable": ["DiamondToolButton"]},
+    {"label": "Line", "acceptable": ["LineToolButton"]},
+    {"label": "Text", "acceptable": ["TextToolButton"]},
+    {"label": "Selection", "acceptable": ["SelectionToolButton"]},
+    {"label": "Eraser", "acceptable": ["EraserToolButton"]},
+    {"label": "Draw", "acceptable": ["FreedrawToolButton"]},
+    {"label": "Hand (panning tool)", "acceptable": ["HandToolButton"]},
+    {"label": "Sticky note", "acceptable": ["StickyNoteToolButton"]},
+    {"label": "Library", "acceptable": ["LibraryMenu", "LibraryButton", "LibraryMenuButton"]},
+    {"label": "Undo", "acceptable": ["UndoRedoActions", "UndoIcon"]},
+    {"label": "Redo", "acceptable": ["UndoRedoActions", "RedoIcon"]},
+    {"label": "Command palette", "acceptable": ["CommandPalette"]},
+    {"label": "Help", "acceptable": ["HelpDialog"]},
+    {"label": "Zoom: 100%", "acceptable": ["ZoomActions", "ZoomMenu"]},
+    {"label": "Dark mode - Shift+Option+D", "acceptable": ["DarkModeToggle", "ThemeToggle", "Appearance"]}
+  ]
+}

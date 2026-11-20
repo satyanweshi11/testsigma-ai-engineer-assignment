@@ -1,0 +1,1233 @@
+{
+  "changed_files_in_map": [
+    "packages/excalidraw/components/App.tsx",
+    "packages/excalidraw/components/HelpDialog.tsx",
+    "packages/excalidraw/components/Toolbar.tsx",
+    "packages/excalidraw/components/Tools.tsx",
+    "packages/excalidraw/components/icons.tsx"
+  ],
+  "impacted_ui": [
+    {
+      "label": "Help",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "HelpDialog",
+      "via_path": "packages/excalidraw/components/HelpDialog.tsx",
+      "confidence": 1.0
+    },
+    {
+      "label": "Undo",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "UndoIcon",
+      "via_path": "packages/excalidraw/components/icons.tsx",
+      "confidence": 1.0
+    },
+    {
+      "label": "Redo",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "RedoIcon",
+      "via_path": "packages/excalidraw/components/icons.tsx",
+      "confidence": 1.0
+    },
+    {
+      "label": "Discord",
+      "role": "menuitem",
+      "screens": [
+        "main_menu"
+      ],
+      "via_symbol": "DiscordIcon",
+      "via_path": "packages/excalidraw/components/icons.tsx",
+      "confidence": 1.0
+    },
+    {
+      "label": "Excalidraw+",
+      "role": "menuitem",
+      "screens": [
+        "main_menu"
+      ],
+      "via_symbol": "ExcalidrawAPIContext",
+      "via_path": "packages/excalidraw/components/App.tsx",
+      "confidence": 0.877
+    },
+    {
+      "label": "Selection",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "SelectionToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.814
+    },
+    {
+      "label": "Rectangle",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "RectangleToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.814
+    },
+    {
+      "label": "Diamond",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "DiamondToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.814
+    },
+    {
+      "label": "Ellipse",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "EllipseToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.814
+    },
+    {
+      "label": "Arrow",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "ArrowToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.814
+    },
+    {
+      "label": "Line",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "LineToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.814
+    },
+    {
+      "label": "Text",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "TextToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.814
+    },
+    {
+      "label": "Eraser",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "EraserToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.814
+    },
+    {
+      "label": "Hand (panning tool)",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "HandToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.79
+    },
+    {
+      "label": "Draw",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "FreedrawToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.79
+    },
+    {
+      "label": "Sticky note",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "StickyNoteToolButton",
+      "via_path": "packages/excalidraw/components/Tools.tsx",
+      "confidence": 0.79
+    },
+    {
+      "label": "More tools",
+      "role": "button",
+      "screens": [
+        "canvas",
+        "command_palette",
+        "export_dialog",
+        "library",
+        "main_menu"
+      ],
+      "via_symbol": "ExtraToolsDropdown",
+      "via_path": "packages/excalidraw/components/Toolbar.tsx",
+      "confidence": 0.79
+    }
+  ],
+  "impacted_screens": [
+    "canvas",
+    "command_palette",
+    "export_dialog",
+    "library",
+    "main_menu"
+  ],
+  "impacted_requirements": [
+    {
+      "id": "REQ-010",
+      "title": "Undo and Redo Capabilities",
+      "type": "functional",
+      "coverage": "verified",
+      "impacted_via": [
+        "Redo",
+        "Undo"
+      ],
+      "confidence": 0.95,
+      "loses_coverage": true,
+      "verified_by_total": 2,
+      "verified_by_impacted": 2
+    },
+    {
+      "id": "REQ-008",
+      "title": "Core Drawing Tools",
+      "type": "functional",
+      "coverage": "verified",
+      "impacted_via": [
+        "Draw",
+        "Eraser",
+        "Rectangle"
+      ],
+      "confidence": 0.773,
+      "loses_coverage": true,
+      "verified_by_total": 3,
+      "verified_by_impacted": 3
+    },
+    {
+      "id": "REQ-011",
+      "title": "Zoom and Canvas Panning",
+      "type": "functional",
+      "coverage": "verified",
+      "impacted_via": [
+        "Hand (panning tool)"
+      ],
+      "confidence": 0.75,
+      "loses_coverage": false,
+      "verified_by_total": 2,
+      "verified_by_impacted": 1
+    },
+    {
+      "id": "REQ-009",
+      "title": "Arrow Binding and Text Labels",
+      "type": "functional",
+      "coverage": "verified",
+      "impacted_via": [
+        "Arrow"
+      ],
+      "confidence": 0.733,
+      "loses_coverage": true,
+      "verified_by_total": 1,
+      "verified_by_impacted": 1
+    },
+    {
+      "id": "REQ-002",
+      "title": "Hand-Drawn Visual Style",
+      "type": "functional",
+      "coverage": "partial",
+      "impacted_via": [
+        "Draw"
+      ],
+      "confidence": 0.593,
+      "loses_coverage": true,
+      "verified_by_total": 1,
+      "verified_by_impacted": 1
+    }
+  ],
+  "indirect_files": [
+    "packages/excalidraw/components/ConfirmDialog.tsx",
+    "packages/excalidraw/components/Actions.tsx",
+    "packages/excalidraw/components/ActiveConfirmDialog.tsx",
+    "packages/excalidraw/components/LibraryMenuItems.tsx",
+    "packages/excalidraw/components/EyeDropper.tsx",
+    "packages/excalidraw/components/QuickSearch.tsx",
+    "packages/excalidraw/components/PasteChartDialog.tsx",
+    "packages/excalidraw/components/ErrorDialog.tsx",
+    "packages/excalidraw/components/ShareableLinkDialog.tsx",
+    "packages/excalidraw/components/LibraryUnit.tsx",
+    "packages/excalidraw/components/LockButton.tsx",
+    "packages/excalidraw/components/DefaultSidebar.tsx",
+    "packages/excalidraw/components/Section.tsx",
+    "packages/excalidraw/components/CheckboxItem.tsx",
+    "packages/excalidraw/components/LaserPointerButton.tsx",
+    "packages/excalidraw/components/ElementCanvasButtons.tsx",
+    "packages/excalidraw/components/ConvertElementTypePopup.tsx",
+    "packages/excalidraw/components/HelpButton.tsx",
+    "packages/excalidraw/components/ImageExportDialog.tsx",
+    "packages/excalidraw/components/FileDropOverlay.tsx",
+    "packages/excalidraw/components/PenModeButton.tsx",
+    "packages/excalidraw/components/ContextMenu.tsx",
+    "packages/excalidraw/components/PropertiesPopover.tsx",
+    "packages/excalidraw/components/DarkModeToggle.tsx",
+    "packages/excalidraw/components/IconPicker.tsx",
+    "packages/excalidraw/components/PublishLibrary.tsx",
+    "packages/excalidraw/components/SearchMenu.tsx",
+    "packages/excalidraw/components/TextField.tsx",
+    "packages/excalidraw/components/LibraryMenu.tsx",
+    "packages/excalidraw/components/ProjectName.tsx",
+    "packages/excalidraw/components/Dialog.tsx",
+    "packages/excalidraw/components/ElementLinkDialog.tsx",
+    "packages/excalidraw/components/ToolPopover.tsx",
+    "packages/excalidraw/components/LibraryMenuHeaderContent.tsx",
+    "packages/excalidraw/components/CursorHint.tsx",
+    "packages/excalidraw/components/MagicButton.tsx",
+    "packages/excalidraw/components/UserList.tsx",
+    "packages/excalidraw/components/Toast.tsx",
+    "packages/excalidraw/components/FilledButton.tsx",
+    "packages/excalidraw/components/JSONExportDialog.tsx",
+    "packages/excalidraw/components/MobileMenu.tsx",
+    "packages/excalidraw/components/UnlockPopup.tsx",
+    "packages/excalidraw/components/Sidebar/SidebarTrigger.tsx",
+    "packages/excalidraw/components/Sidebar/SidebarTabs.tsx",
+    "packages/excalidraw/components/Sidebar/Sidebar.tsx",
+    "packages/excalidraw/components/Sidebar/SidebarHeader.tsx",
+    "packages/excalidraw/components/footer/Footer.tsx",
+    "packages/excalidraw/components/hyperlink/Hyperlink.tsx",
+    "packages/excalidraw/components/OverwriteConfirm/OverwriteConfirmActions.tsx",
+    "packages/excalidraw/components/OverwriteConfirm/OverwriteConfirm.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuItemCheckbox.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuTrigger.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuContent.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuItem.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuItemContent.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuItemContentRadio.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuSubContent.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuSubTrigger.tsx",
+    "packages/excalidraw/components/main-menu/DefaultItems.tsx",
+    "packages/excalidraw/components/main-menu/MainMenu.tsx",
+    "packages/excalidraw/components/Minimap/Minimap.tsx",
+    "packages/excalidraw/components/ViewportStatusFrame/ViewportStatusFrame.tsx",
+    "packages/excalidraw/components/FontPicker/FontPicker.tsx",
+    "packages/excalidraw/components/FontPicker/FontPickerTrigger.tsx",
+    "packages/excalidraw/components/FontPicker/FontPickerList.tsx",
+    "packages/excalidraw/components/TopPicksDnD/TopPicksContextMenu.tsx",
+    "packages/excalidraw/components/welcome-screen/WelcomeScreen.Hints.tsx",
+    "packages/excalidraw/components/welcome-screen/WelcomeScreen.Center.tsx",
+    "packages/excalidraw/components/ColorPicker/ColorInput.tsx",
+    "packages/excalidraw/components/ColorPicker/ColorPicker.tsx",
+    "packages/excalidraw/components/live-collaboration/LiveCollaborationTrigger.tsx",
+    "packages/excalidraw/components/DiagramToCodePlugin/DiagramToCodePlugin.tsx",
+    "packages/excalidraw/components/TTDDialog/TextToDiagram.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDDialogTrigger.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDDialog.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDPreviewPanel.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDDialogOutput.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDDialogTabs.tsx",
+    "packages/excalidraw/components/TTDDialog/MermaidToExcalidraw.tsx",
+    "packages/excalidraw/components/Stats/index.tsx",
+    "packages/excalidraw/components/Stats/Position.tsx",
+    "packages/excalidraw/components/Stats/Angle.tsx",
+    "packages/excalidraw/components/Stats/Dimension.tsx",
+    "packages/excalidraw/components/Stats/MultiPosition.tsx",
+    "packages/excalidraw/components/Stats/MultiAngle.tsx",
+    "packages/excalidraw/components/Stats/CanvasGrid.tsx",
+    "packages/excalidraw/components/Stats/Collapsible.tsx",
+    "packages/excalidraw/components/TTDDialog/Chat/ChatInterface.tsx",
+    "packages/excalidraw/components/TTDDialog/Chat/TTDChatPanel.tsx",
+    "packages/excalidraw/components/TTDDialog/Chat/ChatHistoryMenu.tsx",
+    "packages/excalidraw/components/TTDDialog/Chat/ChatMessage.tsx",
+    "packages/excalidraw/actions/actionElementLock.ts",
+    "packages/excalidraw/actions/actionSelectAll.ts",
+    "packages/excalidraw/actions/actionFrame.ts",
+    "packages/excalidraw/actions/actionElementLink.ts",
+    "packages/excalidraw/actions/actionToggleSearchMenu.ts",
+    "packages/excalidraw/actions/index.ts",
+    "packages/excalidraw/actions/actionDeselect.ts",
+    "packages/excalidraw/actions/actionFlip.ts"
+  ],
+  "unmapped_changes": [
+    {
+      "symbol": "ExcalidrawContainerContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawAPISetContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "AppContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "AppPropsContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "EditorInterfaceContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawElementsContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawAppStateContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawSetAppStateContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawActionManagerContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "YOUTUBE_VIDEO_STATES",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "GOOGLE_DRIVE_AUTOPLAYED",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MAX_EMBEDDABLE_VIEWPORT_SCALE",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "Header",
+      "path": "packages/excalidraw/components/HelpDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "Section",
+      "path": "packages/excalidraw/components/HelpDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ShortcutIsland",
+      "path": "packages/excalidraw/components/HelpDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "Shortcut",
+      "path": "packages/excalidraw/components/HelpDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ShortcutKey",
+      "path": "packages/excalidraw/components/HelpDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "Toolbar",
+      "path": "packages/excalidraw/components/Toolbar.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TOOLS",
+      "path": "packages/excalidraw/components/Tools.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TOGGLE_TOOLS",
+      "path": "packages/excalidraw/components/Tools.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ImageToolButton",
+      "path": "packages/excalidraw/components/Tools.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FrameToolButton",
+      "path": "packages/excalidraw/components/Tools.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LassoToolButton",
+      "path": "packages/excalidraw/components/Tools.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SelectionToolPopover",
+      "path": "packages/excalidraw/components/Tools.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FreedrawToolPopover",
+      "path": "packages/excalidraw/components/Tools.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "PEN_MODE_BUTTON_RESERVED_HEIGHT",
+      "path": "packages/excalidraw/components/LayerUI.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DefaultOverwriteConfirmDialog",
+      "path": "packages/excalidraw/components/LayerUI.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LayerUI",
+      "path": "packages/excalidraw/components/LayerUI.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "HintViewer",
+      "path": "packages/excalidraw/components/HintViewer.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MobileToolbar",
+      "path": "packages/excalidraw/components/MobileToolbar.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "PlusPromoIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LibraryIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "PlusIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DotsIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DotsHorizontalIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "PinIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "UnlockedIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LockedIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LockedIconFilled",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "WelcomeScreenMenuArrow",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "WelcomeScreenHelpArrow",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "WelcomeScreenTopToolbarArrow",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalLogo",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SelectionIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LassoIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "RectangleIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DiamondIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "EllipseIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LineIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "PenModeIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FreedrawIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TextIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TextSizeIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ImageIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "EraserIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ZoomInIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ZoomOutIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ZoomResetIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TrashIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "EmbedIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DuplicateIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MoonIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SunIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "HamburgerMenuIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExportIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "HelpIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "HelpIconThin",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExternalLinkIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "GithubIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "XBrandIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LinkIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LoadIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExportImageIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "BringForwardIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SendBackwardIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "BringToFrontIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SendToBackIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "AlignTopIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "AlignBottomIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "AlignLeftIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "AlignRightIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DistributeHorizontallyIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DistributeVerticallyIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "CenterVerticallyIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "CenterHorizontallyIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "CloseIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "GroupIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "UngroupIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FillZigZagIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FillHachureIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FillCrossHatchIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FillSolidIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "StrokeWidthBaseIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "StrokeWidthBoldIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "StrokeWidthExtraBoldIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "StrokeStyleSolidIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "StrokeStyleDashedIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "StrokeStyleDottedIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SloppinessArchitectIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SloppinessArtistIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SloppinessCartoonistIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "EdgeSharpIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "EdgeRoundIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadNoneIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadArrowIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadTriangleIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadTriangleOutlineIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadCircleIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadCircleOutlineIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadDiamondIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadDiamondOutlineIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadBarIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadCardinalityOneIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadCardinalityManyIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadCardinalityOneOrManyIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadCardinalityExactlyOneIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadCardinalityZeroOrOneIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowheadCardinalityZeroOrManyIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FontSizeSmallIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FontSizeMediumIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FontSizeLargeIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FontSizeExtraLargeIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FontFamilyHeadingIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FontFamilyNormalIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FontFamilyCodeIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TextAlignLeftIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TextAlignCenterIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TextAlignRightIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TextAlignTopIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TextAlignBottomIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "TextAlignMiddleIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "RetryIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ArrowRightIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MagicIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MagicIconThin",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "OpenAIIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DeviceDesktopIcon",
+      "path": "packages/excalidraw/components/icons.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "IconButton",
+      "path": "packages/excalidraw/components/IconButton.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "NewElementCanvas",
+      "path": "packages/excalidraw/components/canvases/NewElementCanvas.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "DEFAULT_CATEGORIES",
+      "path": "packages/excalidraw/components/CommandPalette/CommandPalette.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "CommandPalette",
+      "path": "packages/excalidraw/components/CommandPalette/CommandPalette.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "CommandShortcutHint",
+      "path": "packages/excalidraw/components/CommandPalette/CommandPalette.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "CommandPaletteInner",
+      "path": "packages/excalidraw/components/CommandPalette/CommandPalette.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "LibraryItemIcon",
+      "path": "packages/excalidraw/components/CommandPalette/CommandPalette.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "CommandItem",
+      "path": "packages/excalidraw/components/CommandPalette/CommandPalette.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "STEP_SIZE",
+      "path": "packages/excalidraw/components/Stats/MultiDimension.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MultiDimension",
+      "path": "packages/excalidraw/components/Stats/MultiDimension.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MIN_FONT_SIZE",
+      "path": "packages/excalidraw/components/Stats/FontSize.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "STEP_SIZE",
+      "path": "packages/excalidraw/components/Stats/FontSize.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "FontSize",
+      "path": "packages/excalidraw/components/Stats/FontSize.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MIN_FONT_SIZE",
+      "path": "packages/excalidraw/components/Stats/MultiFontSize.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "STEP_SIZE",
+      "path": "packages/excalidraw/components/Stats/MultiFontSize.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MultiFontSize",
+      "path": "packages/excalidraw/components/Stats/MultiFontSize.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "StatsDragInput",
+      "path": "packages/excalidraw/components/Stats/DragInput.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "copiedStyles",
+      "path": "packages/excalidraw/actions/actionStyles.ts",
+      "kind": "action"
+    },
+    {
+      "symbol": "actionCopyStyles",
+      "path": "packages/excalidraw/actions/actionStyles.ts",
+      "kind": "action"
+    },
+    {
+      "symbol": "actionPasteStyles",
+      "path": "packages/excalidraw/actions/actionStyles.ts",
+      "kind": "action"
+    },
+    {
+      "symbol": "resolveColorTarget",
+      "path": "packages/excalidraw/actions/colorTargets.ts",
+      "kind": "action"
+    },
+    {
+      "symbol": "getColorTargetAppStateUpdates",
+      "path": "packages/excalidraw/actions/colorTargets.ts",
+      "kind": "action"
+    },
+    {
+      "symbol": "isStickyNoteColorTarget",
+      "path": "packages/excalidraw/actions/colorTargets.ts",
+      "kind": "action"
+    }
+  ],
+  "gaps_possibly_affected": [],
+  "pr": {
+    "number": 12064,
+    "title": "feat(editor): sticky notes",
+    "repo": "excalidraw/excalidraw",
+    "files_changed": 84
+  }
+}

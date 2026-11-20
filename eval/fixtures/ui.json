@@ -1,0 +1,1317 @@
+{
+  "base_url": "https://excalidraw.com",
+  "n_screens": 5,
+  "n_elements": 156,
+  "screens": [
+    {
+      "id": "canvas",
+      "url": "https://excalidraw.com/",
+      "title": "Excalidraw Whiteboard",
+      "screenshot": "screens/canvas.png"
+    },
+    {
+      "id": "main_menu",
+      "url": "https://excalidraw.com/",
+      "title": "Excalidraw Whiteboard",
+      "screenshot": "screens/main_menu.png"
+    },
+    {
+      "id": "export_dialog",
+      "url": "https://excalidraw.com/",
+      "title": "Excalidraw Whiteboard",
+      "screenshot": "screens/export_dialog.png"
+    },
+    {
+      "id": "library",
+      "url": "https://excalidraw.com/",
+      "title": "Excalidraw Whiteboard",
+      "screenshot": "screens/library.png"
+    },
+    {
+      "id": "command_palette",
+      "url": "https://excalidraw.com/",
+      "title": "Excalidraw Whiteboard",
+      "screenshot": "screens/command_palette.png"
+    }
+  ],
+  "elements": [
+    {
+      "id": "canvas::0:Open\nCmd+O",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Open\nCmd+O",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Open\nCmd+O"
+    },
+    {
+      "id": "canvas::1:Help\n?",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Help\n?",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Help\n?"
+    },
+    {
+      "id": "canvas::2:Live collaboration...",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Live collaboration...",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Live collaboration..."
+    },
+    {
+      "id": "canvas::3:Sign up",
+      "screen_id": "canvas",
+      "role": "a",
+      "label": "Sign up",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Sign up"
+    },
+    {
+      "id": "canvas::4:Keep selected tool active after drawing",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Keep selected tool active after drawing",
+      "selector": "[data-testid=\"toolbar-lock\"]",
+      "text": "Keep selected tool active after drawing \u2014 Q"
+    },
+    {
+      "id": "canvas::5:Hand (panning tool)",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Hand (panning tool)",
+      "selector": "[data-testid=\"toolbar-hand\"]",
+      "text": "Hand (panning tool) \u2014 H"
+    },
+    {
+      "id": "canvas::6:Selection",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Selection",
+      "selector": "[data-testid=\"toolbar-selection\"]",
+      "text": "Selection \u2014 V or 1"
+    },
+    {
+      "id": "canvas::7:Rectangle",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Rectangle",
+      "selector": "[data-testid=\"toolbar-rectangle\"]",
+      "text": "Rectangle \u2014 R or 2"
+    },
+    {
+      "id": "canvas::8:Diamond",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Diamond",
+      "selector": "[data-testid=\"toolbar-diamond\"]",
+      "text": "Diamond \u2014 D or 3"
+    },
+    {
+      "id": "canvas::9:Ellipse",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Ellipse",
+      "selector": "[data-testid=\"toolbar-ellipse\"]",
+      "text": "Ellipse \u2014 O or 4"
+    },
+    {
+      "id": "canvas::10:Arrow",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Arrow",
+      "selector": "[data-testid=\"toolbar-arrow\"]",
+      "text": "Arrow \u2014 A or 5"
+    },
+    {
+      "id": "canvas::11:Line",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Line",
+      "selector": "[data-testid=\"toolbar-line\"]",
+      "text": "Line \u2014 L or 6"
+    },
+    {
+      "id": "canvas::12:Draw",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Draw",
+      "selector": "[data-testid=\"toolbar-freedraw\"]",
+      "text": "Draw \u2014 P or 7"
+    },
+    {
+      "id": "canvas::13:Text",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Text",
+      "selector": "[data-testid=\"toolbar-text\"]",
+      "text": "Text \u2014 T or 8"
+    },
+    {
+      "id": "canvas::14:Sticky note",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Sticky note",
+      "selector": "[data-testid=\"toolbar-stickynote\"]",
+      "text": "Sticky note \u2014 N"
+    },
+    {
+      "id": "canvas::15:Eraser",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Eraser",
+      "selector": "[data-testid=\"toolbar-eraser\"]",
+      "text": "Eraser \u2014 E or 0"
+    },
+    {
+      "id": "canvas::16:More tools",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "More tools",
+      "selector": "[data-testid=\"dropdown-menu-button\"]",
+      "text": "More tools"
+    },
+    {
+      "id": "canvas::17:Make comments\nwith Excalidraw+",
+      "screen_id": "canvas",
+      "role": "a",
+      "label": "Make comments\nwith Excalidraw+",
+      "selector": ".plus-banner",
+      "text": "Make comments\nwith Excalidraw+"
+    },
+    {
+      "id": "canvas::19:Library",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Library",
+      "selector": "[aria-label=\"Library\"]",
+      "text": "Library"
+    },
+    {
+      "id": "canvas::20:Zoom: 100%",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Zoom: 100%",
+      "selector": "[data-testid=\"zoom-menu-trigger\"]",
+      "text": "Zoom: 100%"
+    },
+    {
+      "id": "canvas::21:Minimap",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Minimap",
+      "selector": "[data-testid=\"button-minimap\"]",
+      "text": "Minimap"
+    },
+    {
+      "id": "canvas::22:Undo",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Undo",
+      "selector": "[data-testid=\"button-undo\"]",
+      "text": "Undo"
+    },
+    {
+      "id": "canvas::23:Redo",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Redo",
+      "selector": "[data-testid=\"button-redo\"]",
+      "text": "Redo"
+    },
+    {
+      "id": "canvas::24:Blog post on end-to-end encryption in Ex",
+      "screen_id": "canvas",
+      "role": "a",
+      "label": "Blog post on end-to-end encryption in Excalidraw",
+      "selector": "[aria-label=\"Blog post on end-to-end encryption in Excalidraw\"]",
+      "text": "Blog post on end-to-end encryption in Excalidraw"
+    },
+    {
+      "id": "canvas::25:Help",
+      "screen_id": "canvas",
+      "role": "button",
+      "label": "Help",
+      "selector": "[aria-label=\"Help\"]",
+      "text": "Help"
+    },
+    {
+      "id": "main_menu::0:Open\nCmd+O",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Open\nCmd+O",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Open\nCmd+O"
+    },
+    {
+      "id": "main_menu::1:Help\n?",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Help\n?",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Help\n?"
+    },
+    {
+      "id": "main_menu::2:Live collaboration...",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Live collaboration...",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Live collaboration..."
+    },
+    {
+      "id": "main_menu::3:Sign up",
+      "screen_id": "main_menu",
+      "role": "a",
+      "label": "Sign up",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Sign up"
+    },
+    {
+      "id": "main_menu::4:Open",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Open",
+      "selector": "[data-testid=\"load-button\"]",
+      "text": "Open"
+    },
+    {
+      "id": "main_menu::5:Save to...",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Save to...",
+      "selector": "[data-testid=\"json-export-button\"]",
+      "text": "Save to..."
+    },
+    {
+      "id": "main_menu::6:Export image...",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Export image...",
+      "selector": "[data-testid=\"image-export-button\"]",
+      "text": "Export image..."
+    },
+    {
+      "id": "main_menu::7:Live collaboration...",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Live collaboration...",
+      "selector": "[data-testid=\"collab-button\"]",
+      "text": "Live collaboration..."
+    },
+    {
+      "id": "main_menu::8:Command palette",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Command palette",
+      "selector": "[data-testid=\"command-palette-button\"]",
+      "text": "Command palette"
+    },
+    {
+      "id": "main_menu::9:Find on canvas",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Find on canvas",
+      "selector": "[data-testid=\"search-menu-button\"]",
+      "text": "Find on canvas"
+    },
+    {
+      "id": "main_menu::10:Help",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Help",
+      "selector": "[data-testid=\"help-menu-item\"]",
+      "text": "Help"
+    },
+    {
+      "id": "main_menu::11:Reset the canvas",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Reset the canvas",
+      "selector": "[data-testid=\"clear-canvas-button\"]",
+      "text": "Reset the canvas"
+    },
+    {
+      "id": "main_menu::12:Excalidraw+",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Excalidraw+",
+      "selector": ".radix-menu-item.dropdown-menu-item",
+      "text": "Excalidraw+"
+    },
+    {
+      "id": "main_menu::13:GitHub",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "GitHub",
+      "selector": "[aria-label=\"GitHub\"]",
+      "text": "GitHub"
+    },
+    {
+      "id": "main_menu::14:X",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "X",
+      "selector": "[aria-label=\"X\"]",
+      "text": "X"
+    },
+    {
+      "id": "main_menu::15:Discord",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Discord",
+      "selector": "[aria-label=\"Discord\"]",
+      "text": "Discord"
+    },
+    {
+      "id": "main_menu::16:Sign up",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Sign up",
+      "selector": ".radix-menu-item.dropdown-menu-item",
+      "text": "Sign up"
+    },
+    {
+      "id": "main_menu::17:Preferences",
+      "screen_id": "main_menu",
+      "role": "menuitem",
+      "label": "Preferences",
+      "selector": ".dropdown-menu-item.dropdown-menu-item-base",
+      "text": "Preferences"
+    },
+    {
+      "id": "main_menu::18:Light mode - Shift+Option+D",
+      "screen_id": "main_menu",
+      "role": "input",
+      "label": "Light mode - Shift+Option+D",
+      "selector": "[aria-label=\"Light mode - Shift+Option+D\"]",
+      "text": "Light mode - Shift+Option+D"
+    },
+    {
+      "id": "main_menu::19:Dark mode - Shift+Option+D",
+      "screen_id": "main_menu",
+      "role": "input",
+      "label": "Dark mode - Shift+Option+D",
+      "selector": "[aria-label=\"Dark mode - Shift+Option+D\"]",
+      "text": "Dark mode - Shift+Option+D"
+    },
+    {
+      "id": "main_menu::20:System mode",
+      "screen_id": "main_menu",
+      "role": "input",
+      "label": "System mode",
+      "selector": "[aria-label=\"System mode\"]",
+      "text": "System mode"
+    },
+    {
+      "id": "main_menu::21:Select language",
+      "screen_id": "main_menu",
+      "role": "select",
+      "label": "Select language",
+      "selector": "[aria-label=\"Select language\"]",
+      "text": "Select language"
+    },
+    {
+      "id": "main_menu::22:#ffffff",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "#ffffff",
+      "selector": "[data-testid=\"color-top-pick-#ffffff\"]",
+      "text": "#ffffff"
+    },
+    {
+      "id": "main_menu::23:#f8f9fa",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "#f8f9fa",
+      "selector": "[data-testid=\"color-top-pick-#f8f9fa\"]",
+      "text": "#f8f9fa"
+    },
+    {
+      "id": "main_menu::24:#f5faff",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "#f5faff",
+      "selector": "[data-testid=\"color-top-pick-#f5faff\"]",
+      "text": "#f5faff"
+    },
+    {
+      "id": "main_menu::25:#fffce8",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "#fffce8",
+      "selector": "[data-testid=\"color-top-pick-#fffce8\"]",
+      "text": "#fffce8"
+    },
+    {
+      "id": "main_menu::26:#fdf8f6",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "#fdf8f6",
+      "selector": "[data-testid=\"color-top-pick-#fdf8f6\"]",
+      "text": "#fdf8f6"
+    },
+    {
+      "id": "main_menu::27:Canvas background",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Canvas background",
+      "selector": "[aria-label=\"Canvas background\"]",
+      "text": "Show background color picker"
+    },
+    {
+      "id": "main_menu::28:Keep selected tool active after drawing",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Keep selected tool active after drawing",
+      "selector": "[data-testid=\"toolbar-lock\"]",
+      "text": "Keep selected tool active after drawing \u2014 Q"
+    },
+    {
+      "id": "main_menu::29:Hand (panning tool)",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Hand (panning tool)",
+      "selector": "[data-testid=\"toolbar-hand\"]",
+      "text": "Hand (panning tool) \u2014 H"
+    },
+    {
+      "id": "main_menu::30:Selection",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Selection",
+      "selector": "[data-testid=\"toolbar-selection\"]",
+      "text": "Selection \u2014 V or 1"
+    },
+    {
+      "id": "main_menu::31:Rectangle",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Rectangle",
+      "selector": "[data-testid=\"toolbar-rectangle\"]",
+      "text": "Rectangle \u2014 R or 2"
+    },
+    {
+      "id": "main_menu::32:Diamond",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Diamond",
+      "selector": "[data-testid=\"toolbar-diamond\"]",
+      "text": "Diamond \u2014 D or 3"
+    },
+    {
+      "id": "main_menu::33:Ellipse",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Ellipse",
+      "selector": "[data-testid=\"toolbar-ellipse\"]",
+      "text": "Ellipse \u2014 O or 4"
+    },
+    {
+      "id": "main_menu::34:Arrow",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Arrow",
+      "selector": "[data-testid=\"toolbar-arrow\"]",
+      "text": "Arrow \u2014 A or 5"
+    },
+    {
+      "id": "main_menu::35:Line",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Line",
+      "selector": "[data-testid=\"toolbar-line\"]",
+      "text": "Line \u2014 L or 6"
+    },
+    {
+      "id": "main_menu::36:Draw",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Draw",
+      "selector": "[data-testid=\"toolbar-freedraw\"]",
+      "text": "Draw \u2014 P or 7"
+    },
+    {
+      "id": "main_menu::37:Text",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Text",
+      "selector": "[data-testid=\"toolbar-text\"]",
+      "text": "Text \u2014 T or 8"
+    },
+    {
+      "id": "main_menu::38:Sticky note",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Sticky note",
+      "selector": "[data-testid=\"toolbar-stickynote\"]",
+      "text": "Sticky note \u2014 N"
+    },
+    {
+      "id": "main_menu::39:Eraser",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Eraser",
+      "selector": "[data-testid=\"toolbar-eraser\"]",
+      "text": "Eraser \u2014 E or 0"
+    },
+    {
+      "id": "main_menu::40:More tools",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "More tools",
+      "selector": "[data-testid=\"dropdown-menu-button\"]",
+      "text": "More tools"
+    },
+    {
+      "id": "main_menu::41:Make comments\nwith Excalidraw+",
+      "screen_id": "main_menu",
+      "role": "a",
+      "label": "Make comments\nwith Excalidraw+",
+      "selector": ".plus-banner",
+      "text": "Make comments\nwith Excalidraw+"
+    },
+    {
+      "id": "main_menu::43:Library",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Library",
+      "selector": "[aria-label=\"Library\"]",
+      "text": "Library"
+    },
+    {
+      "id": "main_menu::44:Zoom: 100%",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Zoom: 100%",
+      "selector": "[data-testid=\"zoom-menu-trigger\"]",
+      "text": "Zoom: 100%"
+    },
+    {
+      "id": "main_menu::45:Minimap",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Minimap",
+      "selector": "[data-testid=\"button-minimap\"]",
+      "text": "Minimap"
+    },
+    {
+      "id": "main_menu::46:Undo",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Undo",
+      "selector": "[data-testid=\"button-undo\"]",
+      "text": "Undo"
+    },
+    {
+      "id": "main_menu::47:Redo",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Redo",
+      "selector": "[data-testid=\"button-redo\"]",
+      "text": "Redo"
+    },
+    {
+      "id": "main_menu::48:Blog post on end-to-end encryption in Ex",
+      "screen_id": "main_menu",
+      "role": "a",
+      "label": "Blog post on end-to-end encryption in Excalidraw",
+      "selector": "[aria-label=\"Blog post on end-to-end encryption in Excalidraw\"]",
+      "text": "Blog post on end-to-end encryption in Excalidraw"
+    },
+    {
+      "id": "main_menu::49:Help",
+      "screen_id": "main_menu",
+      "role": "button",
+      "label": "Help",
+      "selector": "[aria-label=\"Help\"]",
+      "text": "Help"
+    },
+    {
+      "id": "export_dialog::0:Open\nCmd+O",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Open\nCmd+O",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Open\nCmd+O"
+    },
+    {
+      "id": "export_dialog::1:Help\n?",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Help\n?",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Help\n?"
+    },
+    {
+      "id": "export_dialog::2:Live collaboration...",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Live collaboration...",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Live collaboration..."
+    },
+    {
+      "id": "export_dialog::3:Sign up",
+      "screen_id": "export_dialog",
+      "role": "a",
+      "label": "Sign up",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Sign up"
+    },
+    {
+      "id": "export_dialog::4:Keep selected tool active after drawing",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Keep selected tool active after drawing",
+      "selector": "[data-testid=\"toolbar-lock\"]",
+      "text": "Keep selected tool active after drawing \u2014 Q"
+    },
+    {
+      "id": "export_dialog::5:Hand (panning tool)",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Hand (panning tool)",
+      "selector": "[data-testid=\"toolbar-hand\"]",
+      "text": "Hand (panning tool) \u2014 H"
+    },
+    {
+      "id": "export_dialog::6:Selection",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Selection",
+      "selector": "[data-testid=\"toolbar-selection\"]",
+      "text": "Selection \u2014 V or 1"
+    },
+    {
+      "id": "export_dialog::7:Rectangle",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Rectangle",
+      "selector": "[data-testid=\"toolbar-rectangle\"]",
+      "text": "Rectangle \u2014 R or 2"
+    },
+    {
+      "id": "export_dialog::8:Diamond",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Diamond",
+      "selector": "[data-testid=\"toolbar-diamond\"]",
+      "text": "Diamond \u2014 D or 3"
+    },
+    {
+      "id": "export_dialog::9:Ellipse",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Ellipse",
+      "selector": "[data-testid=\"toolbar-ellipse\"]",
+      "text": "Ellipse \u2014 O or 4"
+    },
+    {
+      "id": "export_dialog::10:Arrow",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Arrow",
+      "selector": "[data-testid=\"toolbar-arrow\"]",
+      "text": "Arrow \u2014 A or 5"
+    },
+    {
+      "id": "export_dialog::11:Line",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Line",
+      "selector": "[data-testid=\"toolbar-line\"]",
+      "text": "Line \u2014 L or 6"
+    },
+    {
+      "id": "export_dialog::12:Draw",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Draw",
+      "selector": "[data-testid=\"toolbar-freedraw\"]",
+      "text": "Draw \u2014 P or 7"
+    },
+    {
+      "id": "export_dialog::13:Text",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Text",
+      "selector": "[data-testid=\"toolbar-text\"]",
+      "text": "Text \u2014 T or 8"
+    },
+    {
+      "id": "export_dialog::14:Sticky note",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Sticky note",
+      "selector": "[data-testid=\"toolbar-stickynote\"]",
+      "text": "Sticky note \u2014 N"
+    },
+    {
+      "id": "export_dialog::15:Eraser",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Eraser",
+      "selector": "[data-testid=\"toolbar-eraser\"]",
+      "text": "Eraser \u2014 E or 0"
+    },
+    {
+      "id": "export_dialog::16:More tools",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "More tools",
+      "selector": "[data-testid=\"dropdown-menu-button\"]",
+      "text": "More tools"
+    },
+    {
+      "id": "export_dialog::17:Make comments\nwith Excalidraw+",
+      "screen_id": "export_dialog",
+      "role": "a",
+      "label": "Make comments\nwith Excalidraw+",
+      "selector": ".plus-banner",
+      "text": "Make comments\nwith Excalidraw+"
+    },
+    {
+      "id": "export_dialog::19:Library",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Library",
+      "selector": "[aria-label=\"Library\"]",
+      "text": "Library"
+    },
+    {
+      "id": "export_dialog::20:Zoom: 100%",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Zoom: 100%",
+      "selector": "[data-testid=\"zoom-menu-trigger\"]",
+      "text": "Zoom: 100%"
+    },
+    {
+      "id": "export_dialog::21:Minimap",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Minimap",
+      "selector": "[data-testid=\"button-minimap\"]",
+      "text": "Minimap"
+    },
+    {
+      "id": "export_dialog::22:Undo",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Undo",
+      "selector": "[data-testid=\"button-undo\"]",
+      "text": "Undo"
+    },
+    {
+      "id": "export_dialog::23:Redo",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Redo",
+      "selector": "[data-testid=\"button-redo\"]",
+      "text": "Redo"
+    },
+    {
+      "id": "export_dialog::24:Blog post on end-to-end encryption in Ex",
+      "screen_id": "export_dialog",
+      "role": "a",
+      "label": "Blog post on end-to-end encryption in Excalidraw",
+      "selector": "[aria-label=\"Blog post on end-to-end encryption in Excalidraw\"]",
+      "text": "Blog post on end-to-end encryption in Excalidraw"
+    },
+    {
+      "id": "export_dialog::25:Help",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Help",
+      "selector": "[aria-label=\"Help\"]",
+      "text": "Help"
+    },
+    {
+      "id": "export_dialog::26:on",
+      "screen_id": "export_dialog",
+      "role": "input",
+      "label": "on",
+      "selector": "input",
+      "text": "on"
+    },
+    {
+      "id": "export_dialog::32:Export to PNG",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Export to PNG",
+      "selector": "[aria-label=\"Export to PNG\"]",
+      "text": "Export to PNG"
+    },
+    {
+      "id": "export_dialog::33:Export to SVG",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Export to SVG",
+      "selector": "[aria-label=\"Export to SVG\"]",
+      "text": "Export to SVG"
+    },
+    {
+      "id": "export_dialog::34:Copy PNG to clipboard",
+      "screen_id": "export_dialog",
+      "role": "button",
+      "label": "Copy PNG to clipboard",
+      "selector": "[aria-label=\"Copy PNG to clipboard\"]",
+      "text": "Copy PNG to clipboard"
+    },
+    {
+      "id": "library::0:Keep sidebar open",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Keep sidebar open",
+      "selector": "[data-testid=\"sidebar-dock\"]",
+      "text": "Keep sidebar open"
+    },
+    {
+      "id": "library::1:Close",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Close",
+      "selector": "[data-testid=\"sidebar-close\"]",
+      "text": "Close"
+    },
+    {
+      "id": "library::2:Browse libraries",
+      "screen_id": "library",
+      "role": "a",
+      "label": "Browse libraries",
+      "selector": ".library-menu-browse-button",
+      "text": "Browse libraries"
+    },
+    {
+      "id": "library::3:Open\nCmd+O",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Open\nCmd+O",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Open\nCmd+O"
+    },
+    {
+      "id": "library::4:Help\n?",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Help\n?",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Help\n?"
+    },
+    {
+      "id": "library::5:Live collaboration...",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Live collaboration...",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Live collaboration..."
+    },
+    {
+      "id": "library::6:Sign up",
+      "screen_id": "library",
+      "role": "a",
+      "label": "Sign up",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Sign up"
+    },
+    {
+      "id": "library::7:Keep selected tool active after drawing",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Keep selected tool active after drawing",
+      "selector": "[data-testid=\"toolbar-lock\"]",
+      "text": "Keep selected tool active after drawing \u2014 Q"
+    },
+    {
+      "id": "library::8:Hand (panning tool)",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Hand (panning tool)",
+      "selector": "[data-testid=\"toolbar-hand\"]",
+      "text": "Hand (panning tool) \u2014 H"
+    },
+    {
+      "id": "library::9:Selection",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Selection",
+      "selector": "[data-testid=\"toolbar-selection\"]",
+      "text": "Selection \u2014 V or 1"
+    },
+    {
+      "id": "library::10:Rectangle",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Rectangle",
+      "selector": "[data-testid=\"toolbar-rectangle\"]",
+      "text": "Rectangle \u2014 R or 2"
+    },
+    {
+      "id": "library::11:Diamond",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Diamond",
+      "selector": "[data-testid=\"toolbar-diamond\"]",
+      "text": "Diamond \u2014 D or 3"
+    },
+    {
+      "id": "library::12:Ellipse",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Ellipse",
+      "selector": "[data-testid=\"toolbar-ellipse\"]",
+      "text": "Ellipse \u2014 O or 4"
+    },
+    {
+      "id": "library::13:Arrow",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Arrow",
+      "selector": "[data-testid=\"toolbar-arrow\"]",
+      "text": "Arrow \u2014 A or 5"
+    },
+    {
+      "id": "library::14:Line",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Line",
+      "selector": "[data-testid=\"toolbar-line\"]",
+      "text": "Line \u2014 L or 6"
+    },
+    {
+      "id": "library::15:Draw",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Draw",
+      "selector": "[data-testid=\"toolbar-freedraw\"]",
+      "text": "Draw \u2014 P or 7"
+    },
+    {
+      "id": "library::16:Text",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Text",
+      "selector": "[data-testid=\"toolbar-text\"]",
+      "text": "Text \u2014 T or 8"
+    },
+    {
+      "id": "library::17:Sticky note",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Sticky note",
+      "selector": "[data-testid=\"toolbar-stickynote\"]",
+      "text": "Sticky note \u2014 N"
+    },
+    {
+      "id": "library::18:Eraser",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Eraser",
+      "selector": "[data-testid=\"toolbar-eraser\"]",
+      "text": "Eraser \u2014 E or 0"
+    },
+    {
+      "id": "library::19:More tools",
+      "screen_id": "library",
+      "role": "button",
+      "label": "More tools",
+      "selector": "[data-testid=\"dropdown-menu-button\"]",
+      "text": "More tools"
+    },
+    {
+      "id": "library::20:Make comments\nwith Excalidraw+",
+      "screen_id": "library",
+      "role": "a",
+      "label": "Make comments\nwith Excalidraw+",
+      "selector": ".plus-banner",
+      "text": "Make comments\nwith Excalidraw+"
+    },
+    {
+      "id": "library::22:Library",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Library",
+      "selector": "[aria-label=\"Library\"]",
+      "text": "Library"
+    },
+    {
+      "id": "library::23:Zoom: 100%",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Zoom: 100%",
+      "selector": "[data-testid=\"zoom-menu-trigger\"]",
+      "text": "Zoom: 100%"
+    },
+    {
+      "id": "library::24:Minimap",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Minimap",
+      "selector": "[data-testid=\"button-minimap\"]",
+      "text": "Minimap"
+    },
+    {
+      "id": "library::25:Undo",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Undo",
+      "selector": "[data-testid=\"button-undo\"]",
+      "text": "Undo"
+    },
+    {
+      "id": "library::26:Redo",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Redo",
+      "selector": "[data-testid=\"button-redo\"]",
+      "text": "Redo"
+    },
+    {
+      "id": "library::27:Blog post on end-to-end encryption in Ex",
+      "screen_id": "library",
+      "role": "a",
+      "label": "Blog post on end-to-end encryption in Excalidraw",
+      "selector": "[aria-label=\"Blog post on end-to-end encryption in Excalidraw\"]",
+      "text": "Blog post on end-to-end encryption in Excalidraw"
+    },
+    {
+      "id": "library::28:Help",
+      "screen_id": "library",
+      "role": "button",
+      "label": "Help",
+      "selector": "[aria-label=\"Help\"]",
+      "text": "Help"
+    },
+    {
+      "id": "command_palette::0:Open\nCmd+O",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Open\nCmd+O",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Open\nCmd+O"
+    },
+    {
+      "id": "command_palette::1:Help\n?",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Help\n?",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Help\n?"
+    },
+    {
+      "id": "command_palette::2:Live collaboration...",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Live collaboration...",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Live collaboration..."
+    },
+    {
+      "id": "command_palette::3:Sign up",
+      "screen_id": "command_palette",
+      "role": "a",
+      "label": "Sign up",
+      "selector": ".welcome-screen-menu-item",
+      "text": "Sign up"
+    },
+    {
+      "id": "command_palette::4:Keep selected tool active after drawing",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Keep selected tool active after drawing",
+      "selector": "[data-testid=\"toolbar-lock\"]",
+      "text": "Keep selected tool active after drawing \u2014 Q"
+    },
+    {
+      "id": "command_palette::5:Hand (panning tool)",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Hand (panning tool)",
+      "selector": "[data-testid=\"toolbar-hand\"]",
+      "text": "Hand (panning tool) \u2014 H"
+    },
+    {
+      "id": "command_palette::6:Selection",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Selection",
+      "selector": "[data-testid=\"toolbar-selection\"]",
+      "text": "Selection \u2014 V or 1"
+    },
+    {
+      "id": "command_palette::7:Rectangle",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Rectangle",
+      "selector": "[data-testid=\"toolbar-rectangle\"]",
+      "text": "Rectangle \u2014 R or 2"
+    },
+    {
+      "id": "command_palette::8:Diamond",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Diamond",
+      "selector": "[data-testid=\"toolbar-diamond\"]",
+      "text": "Diamond \u2014 D or 3"
+    },
+    {
+      "id": "command_palette::9:Ellipse",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Ellipse",
+      "selector": "[data-testid=\"toolbar-ellipse\"]",
+      "text": "Ellipse \u2014 O or 4"
+    },
+    {
+      "id": "command_palette::10:Arrow",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Arrow",
+      "selector": "[data-testid=\"toolbar-arrow\"]",
+      "text": "Arrow \u2014 A or 5"
+    },
+    {
+      "id": "command_palette::11:Line",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Line",
+      "selector": "[data-testid=\"toolbar-line\"]",
+      "text": "Line \u2014 L or 6"
+    },
+    {
+      "id": "command_palette::12:Draw",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Draw",
+      "selector": "[data-testid=\"toolbar-freedraw\"]",
+      "text": "Draw \u2014 P or 7"
+    },
+    {
+      "id": "command_palette::13:Text",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Text",
+      "selector": "[data-testid=\"toolbar-text\"]",
+      "text": "Text \u2014 T or 8"
+    },
+    {
+      "id": "command_palette::14:Sticky note",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Sticky note",
+      "selector": "[data-testid=\"toolbar-stickynote\"]",
+      "text": "Sticky note \u2014 N"
+    },
+    {
+      "id": "command_palette::15:Eraser",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Eraser",
+      "selector": "[data-testid=\"toolbar-eraser\"]",
+      "text": "Eraser \u2014 E or 0"
+    },
+    {
+      "id": "command_palette::16:More tools",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "More tools",
+      "selector": "[data-testid=\"dropdown-menu-button\"]",
+      "text": "More tools"
+    },
+    {
+      "id": "command_palette::17:Make comments\nwith Excalidraw+",
+      "screen_id": "command_palette",
+      "role": "a",
+      "label": "Make comments\nwith Excalidraw+",
+      "selector": ".plus-banner",
+      "text": "Make comments\nwith Excalidraw+"
+    },
+    {
+      "id": "command_palette::19:Library",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Library",
+      "selector": "[aria-label=\"Library\"]",
+      "text": "Library"
+    },
+    {
+      "id": "command_palette::20:Zoom: 100%",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Zoom: 100%",
+      "selector": "[data-testid=\"zoom-menu-trigger\"]",
+      "text": "Zoom: 100%"
+    },
+    {
+      "id": "command_palette::21:Minimap",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Minimap",
+      "selector": "[data-testid=\"button-minimap\"]",
+      "text": "Minimap"
+    },
+    {
+      "id": "command_palette::22:Undo",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Undo",
+      "selector": "[data-testid=\"button-undo\"]",
+      "text": "Undo"
+    },
+    {
+      "id": "command_palette::23:Redo",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Redo",
+      "selector": "[data-testid=\"button-redo\"]",
+      "text": "Redo"
+    },
+    {
+      "id": "command_palette::24:Blog post on end-to-end encryption in Ex",
+      "screen_id": "command_palette",
+      "role": "a",
+      "label": "Blog post on end-to-end encryption in Excalidraw",
+      "selector": "[aria-label=\"Blog post on end-to-end encryption in Excalidraw\"]",
+      "text": "Blog post on end-to-end encryption in Excalidraw"
+    },
+    {
+      "id": "command_palette::25:Help",
+      "screen_id": "command_palette",
+      "role": "button",
+      "label": "Help",
+      "selector": "[aria-label=\"Help\"]",
+      "text": "Help"
+    }
+  ],
+  "transitions": [
+    {
+      "src": "canvas",
+      "dst": "main_menu",
+      "rel": "TRANSITIONS_TO",
+      "confidence": 1.0,
+      "evidence": "[data-testid=\"main-menu-trigger\"]"
+    },
+    {
+      "src": "canvas",
+      "dst": "export_dialog",
+      "rel": "TRANSITIONS_TO",
+      "confidence": 1.0,
+      "evidence": "[data-testid=\"main-menu-trigger\"], Export image"
+    },
+    {
+      "src": "canvas",
+      "dst": "library",
+      "rel": "TRANSITIONS_TO",
+      "confidence": 1.0,
+      "evidence": "[aria-label=\"Library\"]"
+    },
+    {
+      "src": "canvas",
+      "dst": "command_palette",
+      "rel": "TRANSITIONS_TO",
+      "confidence": 1.0,
+      "evidence": "[data-testid=\"main-menu-trigger\"], Command palette"
+    }
+  ]
+}

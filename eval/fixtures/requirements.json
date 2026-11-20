@@ -1,0 +1,210 @@
+{
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "title": "Infinite Canvas Whiteboard",
+      "description": "The editor must provide an infinite canvas-based whiteboard interface for drawing and sketching.",
+      "acceptance": [
+        "User can draw and position elements anywhere on an unbounded canvas area."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "absent"
+    },
+    {
+      "id": "REQ-002",
+      "title": "Hand-Drawn Visual Style",
+      "description": "The editor must render elements in a hand-drawn sketchy aesthetic.",
+      "acceptance": [
+        "Drawn shapes and lines are displayed on the canvas in a hand-drawn style."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "partial"
+    },
+    {
+      "id": "REQ-003",
+      "title": "Dark Mode Support",
+      "description": "The editor must support a dark theme display mode.",
+      "acceptance": [
+        "User can toggle or view the canvas and user interface in dark mode."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-004",
+      "title": "Image Support",
+      "description": "The editor must support inserting images onto the canvas.",
+      "acceptance": [
+        "User can insert image files into the drawing canvas as elements."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "absent"
+    },
+    {
+      "id": "REQ-005",
+      "title": "Shape Libraries Support",
+      "description": "The editor must support loading and using shape libraries.",
+      "acceptance": [
+        "User can access and insert elements from shape libraries onto the canvas."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-006",
+      "title": "Export to PNG, SVG, and Clipboard",
+      "description": "The editor must allow users to export canvas drawings to PNG, SVG, or copy them to the clipboard.",
+      "acceptance": [
+        "User can export drawing to a PNG file.",
+        "User can export drawing to an SVG file.",
+        "User can copy drawing output directly to system clipboard."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-007",
+      "title": "Excalidraw Format Import and Export",
+      "description": "The editor must support exporting and loading drawings using the native open JSON format (.excalidraw).",
+      "acceptance": [
+        "User can export drawings as an .excalidraw JSON file.",
+        "User can import and load an .excalidraw file into the canvas."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "absent"
+    },
+    {
+      "id": "REQ-008",
+      "title": "Core Drawing Tools",
+      "description": "The editor must provide core tools including rectangle, circle, diamond, arrow, line, free-draw, and eraser.",
+      "acceptance": [
+        "User can select and draw using rectangle, circle, diamond, arrow, line, and free-draw tools.",
+        "User can erase elements using the eraser tool."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-009",
+      "title": "Arrow Binding and Text Labels",
+      "description": "The editor must support binding arrows to elements and adding text labels to arrows.",
+      "acceptance": [
+        "Arrows can automatically bind their endpoints to shapes on the canvas.",
+        "Text labels can be attached to arrow paths."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-010",
+      "title": "Undo and Redo Capabilities",
+      "description": "The editor must support undoing and redoing drawing actions.",
+      "acceptance": [
+        "Triggering undo reverts the latest user modification.",
+        "Triggering redo re-applies the previously undone action."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-011",
+      "title": "Zoom and Canvas Panning",
+      "description": "The editor must allow users to zoom in/out and pan across the canvas view.",
+      "acceptance": [
+        "User can pan the canvas to view different coordinate regions.",
+        "User can zoom in and out to adjust view magnification."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-012",
+      "title": "Progressive Web App Offline Support",
+      "description": "The application must support PWA capabilities enabling offline usage.",
+      "acceptance": [
+        "Application opens and functions without an active internet connection."
+      ],
+      "type": "non_functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "absent"
+    },
+    {
+      "id": "REQ-013",
+      "title": "Real-Time Multi-User Collaboration",
+      "description": "The application must support live real-time collaboration between multiple users.",
+      "acceptance": [
+        "Changes performed by one participant are reflected in real time for other connected participants."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-014",
+      "title": "End-to-End Encryption",
+      "description": "Collaborative sessions must be end-to-end encrypted.",
+      "acceptance": [
+        "Data exchanged during real-time sessions is encrypted end-to-end."
+      ],
+      "type": "non_functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "absent"
+    },
+    {
+      "id": "REQ-015",
+      "title": "Local-First Browser Autosave",
+      "description": "The application must automatically save drawing state directly to the user's browser storage.",
+      "acceptance": [
+        "Drawing modifications automatically persist in local browser storage without requiring explicit user saves."
+      ],
+      "type": "non_functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "absent"
+    },
+    {
+      "id": "REQ-016",
+      "title": "Read-Only Shareable Links",
+      "description": "The application must allow users to generate read-only shareable links for drawings.",
+      "acceptance": [
+        "User can generate a shareable URL for a drawing.",
+        "Opening the shareable URL opens the drawing in a read-only view."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "absent"
+    },
+    {
+      "id": "REQ-017",
+      "title": "Internationalization and Localization",
+      "description": "The editor must support internationalization (i18n) for localizing interface text.",
+      "acceptance": [
+        "User interface text can be displayed in multiple localized languages."
+      ],
+      "type": "non_functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "verified"
+    },
+    {
+      "id": "REQ-018",
+      "title": "Mermaid Diagram Conversion",
+      "description": "The system must support converting Mermaid diagram definitions into native Excalidraw canvas elements.",
+      "acceptance": [
+        "Mermaid syntax can be converted and rendered into Excalidraw canvas shapes."
+      ],
+      "type": "functional",
+      "source": "excalidraw/excalidraw/README.md",
+      "coverage": "absent"
+    }
+  ]
+}
