@@ -1,0 +1,15 @@
+{
+  "_comment": "Ground-truth blast radius: requirements a human reviewer expects to be flagged for the given PR, by keyword match against requirement titles. Matching is tolerant (keyword in title) because the LLM may reword titles between runs.",
+  "prs": {
+    "12064": {
+      "title": "feat(editor): sticky notes",
+      "reasoning": "Adds a tool in the shared Tools.tsx, which defines every tool button; also touches undo/redo icons. All drawing tools and undo/redo are at risk.",
+      "expected_requirement_keywords": ["Drawing Tools", "Arrow", "Undo", "Zoom"]
+    },
+    "12347": {
+      "title": "feat: replace the export functions with exportScene",
+      "reasoning": "Rewrites the export pipeline behind the Export image dialog.",
+      "expected_requirement_keywords": ["Export"]
+    }
+  }
+}

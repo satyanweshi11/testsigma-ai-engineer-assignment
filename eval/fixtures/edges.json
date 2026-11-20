@@ -1,0 +1,972 @@
+{
+  "edges": [
+    {
+      "src": "canvas::1:Help\n?",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "canvas::6:Selection",
+      "dst": "packages/excalidraw/components/Tools.tsx::SelectionToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:selection"
+    },
+    {
+      "src": "canvas::7:Rectangle",
+      "dst": "packages/excalidraw/components/Tools.tsx::RectangleToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:rectangle"
+    },
+    {
+      "src": "canvas::8:Diamond",
+      "dst": "packages/excalidraw/components/Tools.tsx::DiamondToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:diamond"
+    },
+    {
+      "src": "canvas::9:Ellipse",
+      "dst": "packages/excalidraw/components/Tools.tsx::EllipseToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:ellipse"
+    },
+    {
+      "src": "canvas::10:Arrow",
+      "dst": "packages/excalidraw/components/Tools.tsx::ArrowToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:arrow"
+    },
+    {
+      "src": "canvas::11:Line",
+      "dst": "packages/excalidraw/components/Tools.tsx::LineToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:line"
+    },
+    {
+      "src": "canvas::13:Text",
+      "dst": "packages/excalidraw/components/Tools.tsx::TextToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:text"
+    },
+    {
+      "src": "canvas::15:Eraser",
+      "dst": "packages/excalidraw/components/Tools.tsx::EraserToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:eraser"
+    },
+    {
+      "src": "canvas::19:Library",
+      "dst": "packages/excalidraw/components/LibraryMenu.tsx::LibraryMenu",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:library"
+    },
+    {
+      "src": "canvas::21:Minimap",
+      "dst": "packages/excalidraw/components/Minimap/Minimap.tsx::Minimap",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:minimap"
+    },
+    {
+      "src": "canvas::22:Undo",
+      "dst": "packages/excalidraw/components/icons.tsx::UndoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:undo"
+    },
+    {
+      "src": "canvas::23:Redo",
+      "dst": "packages/excalidraw/components/icons.tsx::RedoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:redo"
+    },
+    {
+      "src": "canvas::25:Help",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "main_menu::1:Help\n?",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "main_menu::6:Export image...",
+      "dst": "packages/excalidraw/components/ImageExportDialog.tsx::ImageExportDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:export,image"
+    },
+    {
+      "src": "main_menu::8:Command palette",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::CommandPalette",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:command,palette"
+    },
+    {
+      "src": "main_menu::10:Help",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "main_menu::12:Excalidraw+",
+      "dst": "packages/excalidraw/components/App.tsx::ExcalidrawAPIContext",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.877,
+      "evidence": "lexical:excalidraw"
+    },
+    {
+      "src": "main_menu::15:Discord",
+      "dst": "packages/excalidraw/components/icons.tsx::DiscordIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:discord"
+    },
+    {
+      "src": "main_menu::17:Preferences",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::Preferences",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:preferences"
+    },
+    {
+      "src": "main_menu::27:Canvas background",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::ChangeCanvasBackground",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.953,
+      "evidence": "lexical:background,canvas"
+    },
+    {
+      "src": "main_menu::30:Selection",
+      "dst": "packages/excalidraw/components/Tools.tsx::SelectionToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:selection"
+    },
+    {
+      "src": "main_menu::31:Rectangle",
+      "dst": "packages/excalidraw/components/Tools.tsx::RectangleToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:rectangle"
+    },
+    {
+      "src": "main_menu::32:Diamond",
+      "dst": "packages/excalidraw/components/Tools.tsx::DiamondToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:diamond"
+    },
+    {
+      "src": "main_menu::33:Ellipse",
+      "dst": "packages/excalidraw/components/Tools.tsx::EllipseToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:ellipse"
+    },
+    {
+      "src": "main_menu::34:Arrow",
+      "dst": "packages/excalidraw/components/Tools.tsx::ArrowToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:arrow"
+    },
+    {
+      "src": "main_menu::35:Line",
+      "dst": "packages/excalidraw/components/Tools.tsx::LineToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:line"
+    },
+    {
+      "src": "main_menu::37:Text",
+      "dst": "packages/excalidraw/components/Tools.tsx::TextToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:text"
+    },
+    {
+      "src": "main_menu::39:Eraser",
+      "dst": "packages/excalidraw/components/Tools.tsx::EraserToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:eraser"
+    },
+    {
+      "src": "main_menu::43:Library",
+      "dst": "packages/excalidraw/components/LibraryMenu.tsx::LibraryMenu",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:library"
+    },
+    {
+      "src": "main_menu::45:Minimap",
+      "dst": "packages/excalidraw/components/Minimap/Minimap.tsx::Minimap",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:minimap"
+    },
+    {
+      "src": "main_menu::46:Undo",
+      "dst": "packages/excalidraw/components/icons.tsx::UndoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:undo"
+    },
+    {
+      "src": "main_menu::47:Redo",
+      "dst": "packages/excalidraw/components/icons.tsx::RedoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:redo"
+    },
+    {
+      "src": "main_menu::49:Help",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "export_dialog::1:Help\n?",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "export_dialog::6:Selection",
+      "dst": "packages/excalidraw/components/Tools.tsx::SelectionToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:selection"
+    },
+    {
+      "src": "export_dialog::7:Rectangle",
+      "dst": "packages/excalidraw/components/Tools.tsx::RectangleToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:rectangle"
+    },
+    {
+      "src": "export_dialog::8:Diamond",
+      "dst": "packages/excalidraw/components/Tools.tsx::DiamondToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:diamond"
+    },
+    {
+      "src": "export_dialog::9:Ellipse",
+      "dst": "packages/excalidraw/components/Tools.tsx::EllipseToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:ellipse"
+    },
+    {
+      "src": "export_dialog::10:Arrow",
+      "dst": "packages/excalidraw/components/Tools.tsx::ArrowToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:arrow"
+    },
+    {
+      "src": "export_dialog::11:Line",
+      "dst": "packages/excalidraw/components/Tools.tsx::LineToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:line"
+    },
+    {
+      "src": "export_dialog::13:Text",
+      "dst": "packages/excalidraw/components/Tools.tsx::TextToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:text"
+    },
+    {
+      "src": "export_dialog::15:Eraser",
+      "dst": "packages/excalidraw/components/Tools.tsx::EraserToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:eraser"
+    },
+    {
+      "src": "export_dialog::19:Library",
+      "dst": "packages/excalidraw/components/LibraryMenu.tsx::LibraryMenu",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:library"
+    },
+    {
+      "src": "export_dialog::21:Minimap",
+      "dst": "packages/excalidraw/components/Minimap/Minimap.tsx::Minimap",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:minimap"
+    },
+    {
+      "src": "export_dialog::22:Undo",
+      "dst": "packages/excalidraw/components/icons.tsx::UndoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:undo"
+    },
+    {
+      "src": "export_dialog::23:Redo",
+      "dst": "packages/excalidraw/components/icons.tsx::RedoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:redo"
+    },
+    {
+      "src": "export_dialog::25:Help",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "library::4:Help\n?",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "library::9:Selection",
+      "dst": "packages/excalidraw/components/Tools.tsx::SelectionToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:selection"
+    },
+    {
+      "src": "library::10:Rectangle",
+      "dst": "packages/excalidraw/components/Tools.tsx::RectangleToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:rectangle"
+    },
+    {
+      "src": "library::11:Diamond",
+      "dst": "packages/excalidraw/components/Tools.tsx::DiamondToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:diamond"
+    },
+    {
+      "src": "library::12:Ellipse",
+      "dst": "packages/excalidraw/components/Tools.tsx::EllipseToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:ellipse"
+    },
+    {
+      "src": "library::13:Arrow",
+      "dst": "packages/excalidraw/components/Tools.tsx::ArrowToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:arrow"
+    },
+    {
+      "src": "library::14:Line",
+      "dst": "packages/excalidraw/components/Tools.tsx::LineToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:line"
+    },
+    {
+      "src": "library::16:Text",
+      "dst": "packages/excalidraw/components/Tools.tsx::TextToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:text"
+    },
+    {
+      "src": "library::18:Eraser",
+      "dst": "packages/excalidraw/components/Tools.tsx::EraserToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:eraser"
+    },
+    {
+      "src": "library::22:Library",
+      "dst": "packages/excalidraw/components/LibraryMenu.tsx::LibraryMenu",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:library"
+    },
+    {
+      "src": "library::24:Minimap",
+      "dst": "packages/excalidraw/components/Minimap/Minimap.tsx::Minimap",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:minimap"
+    },
+    {
+      "src": "library::25:Undo",
+      "dst": "packages/excalidraw/components/icons.tsx::UndoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:undo"
+    },
+    {
+      "src": "library::26:Redo",
+      "dst": "packages/excalidraw/components/icons.tsx::RedoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:redo"
+    },
+    {
+      "src": "library::28:Help",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "command_palette::1:Help\n?",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "command_palette::6:Selection",
+      "dst": "packages/excalidraw/components/Tools.tsx::SelectionToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:selection"
+    },
+    {
+      "src": "command_palette::7:Rectangle",
+      "dst": "packages/excalidraw/components/Tools.tsx::RectangleToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:rectangle"
+    },
+    {
+      "src": "command_palette::8:Diamond",
+      "dst": "packages/excalidraw/components/Tools.tsx::DiamondToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:diamond"
+    },
+    {
+      "src": "command_palette::9:Ellipse",
+      "dst": "packages/excalidraw/components/Tools.tsx::EllipseToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:ellipse"
+    },
+    {
+      "src": "command_palette::10:Arrow",
+      "dst": "packages/excalidraw/components/Tools.tsx::ArrowToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:arrow"
+    },
+    {
+      "src": "command_palette::11:Line",
+      "dst": "packages/excalidraw/components/Tools.tsx::LineToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:line"
+    },
+    {
+      "src": "command_palette::13:Text",
+      "dst": "packages/excalidraw/components/Tools.tsx::TextToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:text"
+    },
+    {
+      "src": "command_palette::15:Eraser",
+      "dst": "packages/excalidraw/components/Tools.tsx::EraserToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.814,
+      "evidence": "lexical:eraser"
+    },
+    {
+      "src": "command_palette::19:Library",
+      "dst": "packages/excalidraw/components/LibraryMenu.tsx::LibraryMenu",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:library"
+    },
+    {
+      "src": "command_palette::21:Minimap",
+      "dst": "packages/excalidraw/components/Minimap/Minimap.tsx::Minimap",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:minimap"
+    },
+    {
+      "src": "command_palette::22:Undo",
+      "dst": "packages/excalidraw/components/icons.tsx::UndoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:undo"
+    },
+    {
+      "src": "command_palette::23:Redo",
+      "dst": "packages/excalidraw/components/icons.tsx::RedoIcon",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:redo"
+    },
+    {
+      "src": "command_palette::25:Help",
+      "dst": "packages/excalidraw/components/HelpDialog.tsx::HelpDialog",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 1.0,
+      "evidence": "lexical:help"
+    },
+    {
+      "src": "canvas::2:Live collaboration...",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::LiveCollaborationTrigger",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.79)"
+    },
+    {
+      "src": "canvas::5:Hand (panning tool)",
+      "dst": "packages/excalidraw/components/Tools.tsx::HandToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "canvas::12:Draw",
+      "dst": "packages/excalidraw/components/Tools.tsx::FreedrawToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "canvas::14:Sticky note",
+      "dst": "packages/excalidraw/components/Tools.tsx::StickyNoteToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.73)"
+    },
+    {
+      "src": "canvas::16:More tools",
+      "dst": "packages/excalidraw/components/Toolbar.tsx::ExtraToolsDropdown",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.76)"
+    },
+    {
+      "src": "canvas::20:Zoom: 100%",
+      "dst": "packages/excalidraw/components/Actions.tsx::ZoomActions",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.50)"
+    },
+    {
+      "src": "main_menu::2:Live collaboration...",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::LiveCollaborationTrigger",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.79)"
+    },
+    {
+      "src": "main_menu::7:Live collaboration...",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::LiveCollaborationTrigger",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.63)"
+    },
+    {
+      "src": "main_menu::11:Reset the canvas",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::ClearCanvas",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.79)"
+    },
+    {
+      "src": "main_menu::19:Dark mode - Shift+Option+D",
+      "dst": "packages/excalidraw/components/DarkModeToggle.tsx::DarkModeToggle",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.65)"
+    },
+    {
+      "src": "main_menu::29:Hand (panning tool)",
+      "dst": "packages/excalidraw/components/Tools.tsx::HandToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "main_menu::36:Draw",
+      "dst": "packages/excalidraw/components/Tools.tsx::FreedrawToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "main_menu::38:Sticky note",
+      "dst": "packages/excalidraw/components/Tools.tsx::StickyNoteToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.73)"
+    },
+    {
+      "src": "main_menu::40:More tools",
+      "dst": "packages/excalidraw/components/Toolbar.tsx::ExtraToolsDropdown",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.76)"
+    },
+    {
+      "src": "main_menu::44:Zoom: 100%",
+      "dst": "packages/excalidraw/components/Actions.tsx::ZoomActions",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.50)"
+    },
+    {
+      "src": "export_dialog::2:Live collaboration...",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::LiveCollaborationTrigger",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.79)"
+    },
+    {
+      "src": "export_dialog::5:Hand (panning tool)",
+      "dst": "packages/excalidraw/components/Tools.tsx::HandToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "export_dialog::12:Draw",
+      "dst": "packages/excalidraw/components/Tools.tsx::FreedrawToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "export_dialog::14:Sticky note",
+      "dst": "packages/excalidraw/components/Tools.tsx::StickyNoteToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.73)"
+    },
+    {
+      "src": "export_dialog::16:More tools",
+      "dst": "packages/excalidraw/components/Toolbar.tsx::ExtraToolsDropdown",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.76)"
+    },
+    {
+      "src": "export_dialog::20:Zoom: 100%",
+      "dst": "packages/excalidraw/components/Actions.tsx::ZoomActions",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.50)"
+    },
+    {
+      "src": "library::2:Browse libraries",
+      "dst": "packages/excalidraw/components/LibraryMenuBrowseButton.tsx::LibraryMenuBrowseButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.53)"
+    },
+    {
+      "src": "library::5:Live collaboration...",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::LiveCollaborationTrigger",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.79)"
+    },
+    {
+      "src": "library::8:Hand (panning tool)",
+      "dst": "packages/excalidraw/components/Tools.tsx::HandToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "library::15:Draw",
+      "dst": "packages/excalidraw/components/Tools.tsx::FreedrawToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "library::17:Sticky note",
+      "dst": "packages/excalidraw/components/Tools.tsx::StickyNoteToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.73)"
+    },
+    {
+      "src": "library::19:More tools",
+      "dst": "packages/excalidraw/components/Toolbar.tsx::ExtraToolsDropdown",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.76)"
+    },
+    {
+      "src": "library::23:Zoom: 100%",
+      "dst": "packages/excalidraw/components/Actions.tsx::ZoomActions",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.50)"
+    },
+    {
+      "src": "command_palette::2:Live collaboration...",
+      "dst": "packages/excalidraw/components/main-menu/DefaultItems.tsx::LiveCollaborationTrigger",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.79)"
+    },
+    {
+      "src": "command_palette::5:Hand (panning tool)",
+      "dst": "packages/excalidraw/components/Tools.tsx::HandToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "command_palette::12:Draw",
+      "dst": "packages/excalidraw/components/Tools.tsx::FreedrawToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.58)"
+    },
+    {
+      "src": "command_palette::14:Sticky note",
+      "dst": "packages/excalidraw/components/Tools.tsx::StickyNoteToolButton",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.73)"
+    },
+    {
+      "src": "command_palette::16:More tools",
+      "dst": "packages/excalidraw/components/Toolbar.tsx::ExtraToolsDropdown",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.76)"
+    },
+    {
+      "src": "command_palette::20:Zoom: 100%",
+      "dst": "packages/excalidraw/components/Actions.tsx::ZoomActions",
+      "rel": "IMPLEMENTED_BY",
+      "confidence": 0.79,
+      "evidence": "llm-adjudicated(0.50)"
+    },
+    {
+      "src": "REQ-002",
+      "dst": "canvas::12:Draw",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.75,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-003",
+      "dst": "main_menu::19:Dark mode - Shift+Option+D",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-003",
+      "dst": "main_menu::18:Light mode - Shift+Option+D",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.85,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-003",
+      "dst": "main_menu::20:System mode",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.85,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-005",
+      "dst": "library::2:Browse libraries",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-006",
+      "dst": "export_dialog::34:Copy PNG to clipboard",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-006",
+      "dst": "export_dialog::33:Export to SVG",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-006",
+      "dst": "export_dialog::32:Export to PNG",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-006",
+      "dst": "main_menu::6:Export image...",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.9,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-008",
+      "dst": "canvas::15:Eraser",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-008",
+      "dst": "canvas::7:Rectangle",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-008",
+      "dst": "canvas::12:Draw",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-009",
+      "dst": "canvas::10:Arrow",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.9,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-010",
+      "dst": "canvas::22:Undo",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-010",
+      "dst": "canvas::23:Redo",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-011",
+      "dst": "canvas::5:Hand (panning tool)",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-011",
+      "dst": "canvas::20:Zoom: 100%",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-013",
+      "dst": "canvas::2:Live collaboration...",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    },
+    {
+      "src": "REQ-017",
+      "dst": "main_menu::21:Select language",
+      "rel": "VERIFIED_BY",
+      "confidence": 0.95,
+      "evidence": "llm+embed"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "GAP-REQ-001",
+      "requirement_id": "REQ-001",
+      "reason": "No UI element in the candidate list directly enables or verifies the infinite canvas whiteboard area.",
+      "best_candidate": "main_menu::11:Reset the canvas",
+      "best_score": 0.676
+    },
+    {
+      "id": "GAP-REQ-004",
+      "requirement_id": "REQ-004",
+      "reason": "No UI element for inserting images onto the canvas is present in the candidate elements list.",
+      "best_candidate": "main_menu::6:Export image...",
+      "best_score": 0.664
+    },
+    {
+      "id": "GAP-REQ-007",
+      "requirement_id": "REQ-007",
+      "reason": "No candidate elements support exporting or opening native .excalidraw JSON format files.",
+      "best_candidate": "main_menu::12:Excalidraw+",
+      "best_score": 0.7
+    },
+    {
+      "id": "GAP-REQ-012",
+      "requirement_id": "REQ-012",
+      "reason": "PWA offline support is a non-functional infrastructure requirement without direct verifying UI controls in the candidate list.",
+      "best_candidate": "main_menu::23:#f8f9fa",
+      "best_score": 0.565
+    },
+    {
+      "id": "GAP-REQ-014",
+      "requirement_id": "REQ-014",
+      "reason": "End-to-end encryption is a non-functional security property that cannot be directly exercised by UI candidate elements.",
+      "best_candidate": "canvas::24:Blog post on end-to-end encryption in Ex",
+      "best_score": 0.703
+    },
+    {
+      "id": "GAP-REQ-015",
+      "requirement_id": "REQ-015",
+      "reason": "Local-first autosave is a non-functional background browser storage capability with no verifying UI control.",
+      "best_candidate": "canvas::4:Keep selected tool active after drawing",
+      "best_score": 0.652
+    },
+    {
+      "id": "GAP-REQ-016",
+      "requirement_id": "REQ-016",
+      "reason": "No UI candidate element provides functionality for generating read-only shareable links.",
+      "best_candidate": "canvas::24:Blog post on end-to-end encryption in Ex",
+      "best_score": 0.633
+    },
+    {
+      "id": "GAP-REQ-018",
+      "requirement_id": "REQ-018",
+      "reason": "No UI element for Mermaid diagram conversion is present in the candidate list.",
+      "best_candidate": "main_menu::12:Excalidraw+",
+      "best_score": 0.669
+    }
+  ]
+}

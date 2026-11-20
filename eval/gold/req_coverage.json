@@ -1,0 +1,23 @@
+{
+  "_comment": "Ground-truth coverage a human QA expert would assign GIVEN the 5 screens we crawled (canvas toolbar, main menu, export dialog, library, command palette). 'absent' means legitimately not verifiable from the captured UI (non-functional, or behind an un-crawled interaction). Keyed to the frozen fixture's requirement ids. Deliberately disagrees with the system in a couple of places to test the eval.",
+  "expected": {
+    "REQ-001": "absent",    "_REQ-001": "Infinite canvas is a <canvas>, not a DOM control",
+    "REQ-002": "absent",    "_REQ-002": "Hand-drawn style is a rendering property, no UI control",
+    "REQ-003": "verified",  "_REQ-003": "Dark mode toggle present in menu",
+    "REQ-004": "absent",    "_REQ-004": "Image tool behind the 'More tools' dropdown — not crawled",
+    "REQ-005": "verified",  "_REQ-005": "Library panel captured",
+    "REQ-006": "verified",  "_REQ-006": "Export dialog captured (PNG/SVG/clipboard)",
+    "REQ-007": "verified",  "_REQ-007": "Open / Save-to menu items ARE the .excalidraw import/export",
+    "REQ-008": "verified",  "_REQ-008": "Core toolbar tools captured",
+    "REQ-009": "verified",  "_REQ-009": "Arrow tool captured",
+    "REQ-010": "verified",  "_REQ-010": "Undo/Redo captured",
+    "REQ-011": "verified",  "_REQ-011": "Zoom controls captured",
+    "REQ-012": "absent",    "_REQ-012": "PWA offline — no UI control",
+    "REQ-013": "verified",  "_REQ-013": "Live collaboration trigger captured",
+    "REQ-014": "absent",    "_REQ-014": "E2E encryption — no UI control",
+    "REQ-015": "absent",    "_REQ-015": "Autosave — background, no UI control",
+    "REQ-016": "absent",    "_REQ-016": "Shareable link only appears after starting collaboration",
+    "REQ-017": "verified",  "_REQ-017": "Language selector captured in menu",
+    "REQ-018": "absent",    "_REQ-018": "Mermaid conversion behind the text-to-diagram dialog — not crawled"
+  }
+}

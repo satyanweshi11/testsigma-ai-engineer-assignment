@@ -1,0 +1,14 @@
+{
+  "ui_code_accuracy": 1.0,
+  "n": 18,
+  "coverage_accuracy": 0.8888888888888888,
+  "blast_radius_recall": {
+    "12064": 1.0,
+    "12347": 1.0
+  },
+  "calibration": {
+    "[0.8,1.0]": 1.0,
+    "[0.5,0.8)": 1.0
+  },
+  "deterministic_core_stable": true
+}
