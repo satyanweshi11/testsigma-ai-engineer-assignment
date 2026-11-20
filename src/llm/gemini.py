@@ -28,15 +28,18 @@ class GeminiClient(LLMClient):
             )
         # Imported lazily so the package imports even before google-genai is installed.
         from google import genai  # type: ignore
+        from google.genai import types  # type: ignore
 
         self._genai = genai
-        self.client = genai.Client(api_key=api_key)
-        self.model = model or os.environ.get("LLM_MODEL", "gemini-3.5-flash")
+        # Hard per-request timeout so a slow/stuck model call fails fast instead of
+        # hanging a request (e.g. the chat UI) indefinitely.
+        self.client = genai.Client(api_key=api_key, http_options=types.HttpOptions(timeout=45000))
+        self.model = model or os.environ.get("LLM_MODEL", "gemini-3.5-flash-lite")
         self.embed_model = embed_model or os.environ.get("EMBED_MODEL", "gemini-embedding-001")
 
     @retry(
-        stop=stop_after_attempt(5),
-        wait=wait_exponential(multiplier=2, min=2, max=60),
+        stop=stop_after_attempt(3),
+        wait=wait_exponential(multiplier=2, min=2, max=15),
         retry=retry_if_exception_type(Exception),
         reraise=True,
     )
