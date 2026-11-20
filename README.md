@@ -65,6 +65,55 @@ python run.py reason --pr 1234    # stage 6: blast radius for a real PR
 
 ---
 
+## Explore the graph in Neo4j
+
+Open **http://localhost:7474** and log in with `neo4j` / `testsigma123` (connect URL `bolt://localhost:7687`). Paste any of these into the query bar.
+
+**1. The tri-layer graph — requirement → UI → code (the whole point):**
+```cypher
+MATCH p=(r:Requirement)-[:VERIFIED_BY]->(u:UIElement)-[:IMPLEMENTED_BY]->(c:CodeSymbol)
+WHERE r.id IN ['REQ-002','REQ-006','REQ-010']
+RETURN p
+```
+
+**2. Blast radius of the sticky-notes PR — everything touching `Tools.tsx`:**
+```cypher
+MATCH (c:CodeSymbol)<-[:IMPLEMENTED_BY]-(u:UIElement)<-[:VERIFIED_BY]-(r:Requirement)
+WHERE c.path CONTAINS 'Tools.tsx'
+RETURN c, u, r
+```
+
+**3. Absence — requirements with no UI (the `Gap` nodes):**
+```cypher
+MATCH p=(r:Requirement)-[:HAS_GAP]->(g:Gap) RETURN p
+```
+
+**4. One export dialog, full stack:**
+```cypher
+MATCH p=(r:Requirement)-[:VERIFIED_BY]->(u:UIElement)-[:IMPLEMENTED_BY]->(c:CodeSymbol)
+WHERE c.path CONTAINS 'ImageExportDialog'
+RETURN p
+```
+
+**5. Which requirements lose coverage if a set of files changes** (the core blast-radius query):
+```cypher
+MATCH (cs:CodeSymbol)<-[:IMPLEMENTED_BY]-(ui:UIElement)<-[:VERIFIED_BY]-(r:Requirement)
+WHERE cs.path IN ['packages/excalidraw/components/Tools.tsx']
+RETURN r.title AS requirement, collect(DISTINCT ui.label) AS at_risk_ui
+```
+
+**6. Overview of the whole schema:**
+```cypher
+CALL db.schema.visualization()
+```
+
+**7. Requirement coverage breakdown:**
+```cypher
+MATCH (r:Requirement) RETURN r.coverage AS coverage, count(*) AS n ORDER BY n DESC
+```
+
+---
+
 ## Scope (declared, not hidden)
 
 Per the assignment's hard-scope note, depth is **deliberately uneven**:
