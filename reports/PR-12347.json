@@ -1,0 +1,219 @@
+{
+  "changed_files_in_map": [
+    "packages/excalidraw/components/App.tsx",
+    "packages/excalidraw/components/ImageExportDialog.tsx"
+  ],
+  "impacted_ui": [
+    {
+      "label": "Export image...",
+      "role": "menuitem",
+      "screens": [
+        "main_menu"
+      ],
+      "via_symbol": "ImageExportDialog",
+      "via_path": "packages/excalidraw/components/ImageExportDialog.tsx",
+      "confidence": 1.0
+    },
+    {
+      "label": "Excalidraw+",
+      "role": "menuitem",
+      "screens": [
+        "main_menu"
+      ],
+      "via_symbol": "ExcalidrawAPIContext",
+      "via_path": "packages/excalidraw/components/App.tsx",
+      "confidence": 0.877
+    }
+  ],
+  "impacted_screens": [
+    "main_menu"
+  ],
+  "impacted_requirements": [
+    {
+      "id": "REQ-006",
+      "title": "Drawing Export to Image and File Formats",
+      "type": "functional",
+      "coverage": "verified",
+      "impacted_via": [
+        "Export image..."
+      ],
+      "confidence": 0.9,
+      "loses_coverage": false,
+      "verified_by_total": 3,
+      "verified_by_impacted": 1
+    }
+  ],
+  "indirect_files": [
+    "packages/excalidraw/components/ConfirmDialog.tsx",
+    "packages/excalidraw/components/Actions.tsx",
+    "packages/excalidraw/components/HelpDialog.tsx",
+    "packages/excalidraw/components/ActiveConfirmDialog.tsx",
+    "packages/excalidraw/components/LibraryMenuItems.tsx",
+    "packages/excalidraw/components/EyeDropper.tsx",
+    "packages/excalidraw/components/Toolbar.tsx",
+    "packages/excalidraw/components/ErrorDialog.tsx",
+    "packages/excalidraw/components/LibraryUnit.tsx",
+    "packages/excalidraw/components/DefaultSidebar.tsx",
+    "packages/excalidraw/components/Section.tsx",
+    "packages/excalidraw/components/ElementCanvasButtons.tsx",
+    "packages/excalidraw/components/ConvertElementTypePopup.tsx",
+    "packages/excalidraw/components/LayerUI.tsx",
+    "packages/excalidraw/components/FileDropOverlay.tsx",
+    "packages/excalidraw/components/ContextMenu.tsx",
+    "packages/excalidraw/components/PropertiesPopover.tsx",
+    "packages/excalidraw/components/IconPicker.tsx",
+    "packages/excalidraw/components/SearchMenu.tsx",
+    "packages/excalidraw/components/LibraryMenu.tsx",
+    "packages/excalidraw/components/ProjectName.tsx",
+    "packages/excalidraw/components/Dialog.tsx",
+    "packages/excalidraw/components/ToolPopover.tsx",
+    "packages/excalidraw/components/LibraryMenuHeaderContent.tsx",
+    "packages/excalidraw/components/CursorHint.tsx",
+    "packages/excalidraw/components/UserList.tsx",
+    "packages/excalidraw/components/UnlockPopup.tsx",
+    "packages/excalidraw/components/Sidebar/SidebarTrigger.tsx",
+    "packages/excalidraw/components/Sidebar/SidebarTabs.tsx",
+    "packages/excalidraw/components/Sidebar/Sidebar.tsx",
+    "packages/excalidraw/components/Sidebar/SidebarHeader.tsx",
+    "packages/excalidraw/components/footer/Footer.tsx",
+    "packages/excalidraw/components/hyperlink/Hyperlink.tsx",
+    "packages/excalidraw/components/OverwriteConfirm/OverwriteConfirmActions.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuTrigger.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuContent.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuItem.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuItemContent.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuItemContentRadio.tsx",
+    "packages/excalidraw/components/dropdownMenu/DropdownMenuSubContent.tsx",
+    "packages/excalidraw/components/main-menu/DefaultItems.tsx",
+    "packages/excalidraw/components/main-menu/MainMenu.tsx",
+    "packages/excalidraw/components/Minimap/Minimap.tsx",
+    "packages/excalidraw/components/FontPicker/FontPickerTrigger.tsx",
+    "packages/excalidraw/components/FontPicker/FontPickerList.tsx",
+    "packages/excalidraw/components/TopPicksDnD/TopPicksContextMenu.tsx",
+    "packages/excalidraw/components/welcome-screen/WelcomeScreen.Center.tsx",
+    "packages/excalidraw/components/ColorPicker/ColorInput.tsx",
+    "packages/excalidraw/components/ColorPicker/ColorPicker.tsx",
+    "packages/excalidraw/components/CommandPalette/CommandPalette.tsx",
+    "packages/excalidraw/components/DiagramToCodePlugin/DiagramToCodePlugin.tsx",
+    "packages/excalidraw/components/TTDDialog/TextToDiagram.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDDialogTrigger.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDDialog.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDDialogOutput.tsx",
+    "packages/excalidraw/components/TTDDialog/TTDDialogTabs.tsx",
+    "packages/excalidraw/components/TTDDialog/MermaidToExcalidraw.tsx",
+    "packages/excalidraw/components/Stats/index.tsx",
+    "packages/excalidraw/components/Stats/DragInput.tsx",
+    "packages/excalidraw/actions/actionSelectAll.ts",
+    "packages/excalidraw/actions/actionFrame.ts",
+    "packages/excalidraw/actions/actionDeselect.ts"
+  ],
+  "unmapped_changes": [
+    {
+      "symbol": "ExcalidrawContainerContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawAPISetContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "AppContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "AppPropsContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "EditorInterfaceContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawElementsContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawAppStateContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawSetAppStateContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExcalidrawActionManagerContext",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "YOUTUBE_VIDEO_STATES",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "GOOGLE_DRIVE_AUTOPLAYED",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "MAX_EMBEDDABLE_VIEWPORT_SCALE",
+      "path": "packages/excalidraw/components/App.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "PasteChartDialog",
+      "path": "packages/excalidraw/components/PasteChartDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ChartPreviewBtn",
+      "path": "packages/excalidraw/components/PasteChartDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "PlainTextPreviewBtn",
+      "path": "packages/excalidraw/components/PasteChartDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ErrorCanvasPreview",
+      "path": "packages/excalidraw/components/ImageExportDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ImageExportModal",
+      "path": "packages/excalidraw/components/ImageExportDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "ExportSetting",
+      "path": "packages/excalidraw/components/ImageExportDialog.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "SingleLibraryItem",
+      "path": "packages/excalidraw/components/PublishLibrary.tsx",
+      "kind": "component"
+    },
+    {
+      "symbol": "PublishLibrary",
+      "path": "packages/excalidraw/components/PublishLibrary.tsx",
+      "kind": "component"
+    }
+  ],
+  "gaps_possibly_affected": [],
+  "pr": {
+    "number": 12347,
+    "title": "feat(packages/excalidraw): replace the export functions with `exportScene`",
+    "repo": "excalidraw/excalidraw",
+    "files_changed": 31
+  }
+}
