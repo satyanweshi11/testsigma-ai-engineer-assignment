@@ -1,0 +1,27 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+coverage.xml
+
+# Artifacts (large / regenerable crawl + graph outputs)
+artifacts/
+!artifacts/.gitkeep
+
+# Repo clones pulled for the code layer
+.cache/
+repos/
+
+# Playwright
+playwright-report/
+test-results/
+
+# OS
+.DS_Store

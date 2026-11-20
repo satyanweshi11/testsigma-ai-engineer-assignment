@@ -1,0 +1,76 @@
+# The target system under analysis. Everything downstream is driven by this file,
+# so pointing the engine at a different app = editing this, nothing else.
+
+name: excalidraw
+
+# --- UI layer (Stage 1: crawl) ---
+app:
+  base_url: "https://excalidraw.com"
+  # Seed screens/states to capture. The crawler visits base_url, then performs each
+  # listed interaction to reveal more UI (dialogs, menus) and records the transition.
+  # We scope crawl BREADTH down deliberately (see CONTEXT.md) — depth is on linking/reasoning.
+  # Each seed may carry an `actions` list (performed in order) to reveal UI, and a
+  # `verify` selector that must appear for the open to count (else we record base state).
+  seeds:
+    - id: canvas
+      description: "Main drawing canvas with the shape toolbar"
+    - id: main_menu
+      description: "Main hamburger menu (open/save/export/help/collab)"
+      actions:
+        - click: '[data-testid="main-menu-trigger"]'
+      verify: '.dropdown-menu-container, [data-testid="dropdown-menu"]'
+    - id: export_dialog
+      description: "Export image dialog (PNG/SVG/clipboard)"
+      actions:
+        - click: '[data-testid="main-menu-trigger"]'
+        - click_text: "Export image"
+      verify: '.Dialog, [role="dialog"]'
+    - id: library
+      description: "Shape library panel"
+      actions:
+        - click: '[aria-label="Library"]'
+      verify: '.layer-ui__library, .library-menu'
+    - id: command_palette
+      description: "Command palette (searchable actions)"
+      actions:
+        - click: '[data-testid="main-menu-trigger"]'
+        - click_text: "Command palette"
+      verify: '.Dialog, [role="dialog"], .command-palette'
+  max_screens: 8          # hard cap — scope control
+
+# --- Requirements layer (Stage 2: ingest) ---
+docs:
+  # Public product docs / README used to derive testable requirements.
+  sources:
+    - type: github_readme
+      repo: "excalidraw/excalidraw"
+    - type: url
+      url: "https://docs.excalidraw.com/"
+  # A small curated set is fine; the goal is meaningful absence modeling, not coverage.
+
+# --- Code layer (Stage 3: code map) ---
+code:
+  repo: "excalidraw/excalidraw"
+  clone_ref: "master"
+  # Where the mappable UI components live (keeps the symbol parse focused + fast).
+  include_globs:
+    - "packages/excalidraw/components/**/*.tsx"
+    - "packages/excalidraw/actions/**/*.ts"
+  exclude_globs:
+    - "**/*.test.*"
+    - "**/*.stories.*"
+
+# --- Reason (Stage 6: blast radius) ---
+# The real PR we point the engine at for the sample blast-radius report.
+# TODO: pin a concrete merged PR number that touches a mapped component.
+pr:
+  number: 12347          # feat: replace the export functions with `exportScene`
+  repo: "excalidraw/excalidraw"
+  dependency_hops: 1     # how far to expand via the code import graph
+  hop_decay: 0.6         # confidence multiplier per dependency hop
+
+# --- Linker thresholds (Stage 4) ---
+linking:
+  accept_threshold: 0.80    # >= auto-accept an edge
+  review_threshold: 0.50    # [review, accept) -> tentative, flagged
+                            # < review_threshold -> treated as absence / unmapped
