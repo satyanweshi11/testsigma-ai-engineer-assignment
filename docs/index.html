@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blast Radius Engine</title>
+<style>
+  :root{--bg:#f6f7f9;--surface:#fff;--ink:#10151c;--soft:#4a5566;--line:#d9dee6;--accent:#2f54eb;
+        --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+        --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+  @media (prefers-color-scheme:dark){:root{--bg:#0c1016;--surface:#141a22;--ink:#eef2f7;
+        --soft:#9aa7b8;--line:#28323f;--accent:#6f8bff;color-scheme:dark}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.55;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:56px max(20px,env(safe-area-inset-left)) 72px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin:0 0 12px}
+  h1{font-size:clamp(30px,6vw,44px);line-height:1.05;letter-spacing:-.02em;margin:0 0 14px}
+  .lede{font-size:18px;color:var(--soft);max-width:60ch;margin:0 0 36px}
+  .links{display:grid;gap:12px}
+  a.card{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;
+         background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;color:inherit}
+  a.card:hover{border-color:var(--accent)}
+  a.card .t{font-weight:600}
+  a.card .d{font-size:13.5px;color:var(--soft);margin-top:2px}
+  a.card .arrow{color:var(--accent);font-family:var(--mono)}
+  footer{margin-top:40px;font-family:var(--mono);font-size:12.5px;color:var(--soft)}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Testsigma · AI Engineer Assignment</p>
+  <h1>Blast Radius Engine</h1>
+  <p class="lede">A tri-layer knowledge graph connecting product intent, the running UI, and the code behind it — which, given a real pull request, reports what is at risk in language a QA lead can read.</p>
+  <div class="links">
+    <a class="card" href="./architecture.html">
+      <span><span class="t">Architecture diagram</span><div class="d">The six-stage pipeline, deterministic/LLM boundary, and graph schema</div></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="card" href="https://github.com/satyanweshi11/testsigma-ai-engineer-assignment">
+      <span><span class="t">Source code and README</span><div class="d">Runnable end-to-end, with Neo4j query cheatsheet</div></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="card" href="https://github.com/satyanweshi11/testsigma-ai-engineer-assignment/blob/main/docs/design.md">
+      <span><span class="t">Design document</span><div class="d">Agent decomposition, schema, confidence, eval, scope, roadmap</div></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="card" href="https://github.com/satyanweshi11/testsigma-ai-engineer-assignment/blob/main/docs/production-architecture.md">
+      <span><span class="t">Production architecture</span><div class="d">Security and the designed-not-wired scaling topology</div></span>
+      <span class="arrow">→</span>
+    </a>
+    <a class="card" href="https://github.com/satyanweshi11/testsigma-ai-engineer-assignment/blob/main/reports/PR-12064.md">
+      <span><span class="t">Sample blast-radius report</span><div class="d">A real PR, written for a non-engineer QA lead</div></span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+  <footer>Neo4j · Playwright · Gemini · deterministic spine, LLM at the seams</footer>
+</div>
+</body>
+</html>
